@@ -154,17 +154,17 @@ BinFutures поставляется по принципу «как есть». 
 
 ==================================================================      
 
-![](./screenshots/Future_work11.png)    
+![](https://github.com/ebot732/ebot732.github.io/blob/main/screenshots/Future_work11.png)    
 
 ==========================       
 время |BUY/SELL| статус |кол-во| пара | сумма | цена | id ордера на бирже
-![](./screenshots/Future_work1_start_order.png)   
+![](https://github.com/ebot732/ebot732.github.io/blob/main/screenshots/Future_work1_start_order.png)   
 Стартовый и усредняющие ордера в консоли выделены зеленым цветом.  
 
-![](./screenshots/Future_work1_FIX_order.png)   
+![](https://github.com/ebot732/ebot732.github.io/blob/main/screenshots/Future_work1_FIX_order.png)   
 Ордер (FIX) для закрытия сделки по стратегии выделен фиолетовым цветом.
 
-![](./screenshots/Future_work1_string_status_bot.png)   
+![](https://github.com/ebot732/ebot732.github.io/blob/main/screenshots/Future_work1_string_status_bot.png)   
 Строка состояния бота выделена желтым цветом.
 
 
