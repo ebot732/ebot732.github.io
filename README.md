@@ -138,19 +138,19 @@ BinFutures поставляется по принципу «как есть». 
 
              Скриншоты
 
-![Screenshot](https://github.com/ebot732/BinFutures/blob/main/screenshots/Screenshot_20230513-105645.png)
+![Screenshot](https://github.com/ebot732/ebot732.github.io/blob/main/screenshots/Screenshot_20230513-105645.png)
 
 =================================================================
 
-![Screenshot](https://github.com/ebot732/BinFutures/blob/main/screenshots/Screenshot_20230513-110343.png)
+![Screenshot](https://github.com/ebot732/ebot732.github.io/blob/main/screenshots/Screenshot_20230513-110343.png)
 
 ==================================================================
 
-![Screenshot](https://github.com/ebot732/BinFutures/blob/main/screenshots/BinFutTelegr_params.png)
+![Screenshot](https://github.com/ebot732/ebot732.github.io/blob/main/screenshots/BinFutTelegr_params.png)
 
 ==================================================================
 
-![Screenshot](https://github.com/ebot732/BinFutures/blob/main/screenshots/BinFut_terminal_start.png)
+![Screenshot](https://github.com/ebot732/ebot732.github.io/blob/main/screenshots/BinFut_terminal_start.png)
 
 ==================================================================      
 
