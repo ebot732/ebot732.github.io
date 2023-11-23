@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>BybitFutures</title>
+	<meta name="description" content="Описание страницы" />
+	<meta name="keywords" content="Ключевые слова" />
+	<link rel="stylesheet" type="text/css" href="style.css" media="screen" />
+	</head>
+<body>
+	<div id="page">
+	<header>
+
+		<nav>
+			<ul id="top_menu">
+				<li><a href="index.html">Главная</a></li>
+				<li><a href="binfutures.html">BinFutures</a></li>
+				<li><a href="binspot.html">BinSpot</a></li>
+				<li><a href="bybitfutures.html">BybitFutures</a></li>
+				<li><a href="bybitspot.html">BybitSpot</a></li>
+				<li><a href="commexfutures.html">CommexFutures</a></li>
+                <li><a href="commexspot.html">CommexSpot</a></li>
+                <li><a href="mexcspot.html">MexcSpot</a></li>
+				<li><a href=" https://github.com/ebot732/">GITHUB</a></li>
+			</ul>
+		</nav>
+		
+		<div class="header_img">
+		<img src="screenshots/header_img.jpg" alt="Красота" />
+		</div>
+	</header>
+
+	<section id="content">
+   <h1></h1>
+   <h1></h1>
+  <h1>Trading bot for Bybit exchange.</h1>
+
+<p></p>
+<p>BybitFutures</p>
+<p>Страница на github.com:  <a href="https://github.com/ebot732/BybitFutures/">https://github.com/ebot732/BybitFutures/</a>
+<p>При регистрации на бирже по рефссылке использование бота бесплатное. <br>
+ ( реф ссылка для регистрации: https://www.bybit.com/invite?ref=8E183W ) <br>
+Бот для торговли на криптобирже Bybit фьючерсами USDT Perpetual (аналог BinFutures-22). <br>
+Для использования с типом аккаунта Unified trading account установите параметр Account_Type в: Unified TA, с типом аккаунта Classic trading account в: Classic TA.<br>
+Можно выбирать реальную или тестовую биржу (https://testnet.bybit.com/). </p>
+
+<p> Бот может работать в одном из 4-х режимов:<br>
+1. Режим стандартный- перебор пар для выбора подходящей по всем заданным условиям: <br>
+ - объем торгов за 24 часа в USDT больше указанного в настройках;<br>
+ - объем торгов последней свечи или предпоследней больше объема выбранной дальней свечи на %, указанный в настройках;<br>
+ - изменение текущей цены по отношению к цене открытия дальней свечи:<br>
+ с подрежимом delta_start1- при LONG рост цены больше, чем на указанный %,<br>
+ - при SHORT падение цены еще больше, чем на указанный %,<br>
+ с подрежимом delta_start2- при LONG падение цены еще больше, чем на указанный %,<br>
+ - при SHORT рост цены больше, чем на указанный %.<br>
+ <br>
+2. Режим super_asset: бот работает с парой без каких-либо условий до отключения.</p>
+
+<p>3. Режим control_auto: выбор подходящей пары заданным условиям стандартного режима и работа с ней до истечения указанного таймера от старта позиции в этом режиме, или достижения стоп_цены (изменения на указанный % от цены старта).</p>
+
+<p>4. Режим most_changed- перебор пар для выбора подходящей по следующим условиям: <br>
+ - объем торгов за 24 часа в USDT больше указанного в настройках,<br>
+ - курс пары за последние 24 часа изменился в заданном коридоре (с выбором ближе к максимальному или минимальному значению коридора).<br>
+ <br>
+ Режимы super_asset, control_auto и most_changed взаимоисключающие, т.е. при выборе одного из режимов другие режимы отключаются. Если не выбран ни один из режимов, бот будет работать в стандартном режиме.<br>
+ Подробнее смотри в описании BinFutures.</p>
+
+<p>Запуск бота на VPS с ubuntu<br>
+1. Подключаемся к серверу и по умолчанию находимся в корневом каталоге.<br>
+2. Создаем новую папку (например, с именем BybitFutures) командой: <br>
+mkdir BybitFutures<br>
+3. Создаём новую screen-сессию (назовем, например, тоже BybitFutures) для бота командой: <br>
+screen -S BybitFutures<br>
+4. Заходим в папку BybitFutures командой: <br>
+cd BybitFutures<br>
+5. Скачиваем бота в папку BybitFutures командой: <br>
+wget https://github.com/ebot732/BybitFutures/releases/download/BybitFutures-22/BybitFutures-22 <br>
+7. Даём права на запуск бота командой: <br>
+chmod 755 BybitFutures-2<br>
+8. Запускаем бота командой: <br>
+./BybitFutures-22 <br>
+и следуем подсказкам.<br>
+9. Выходим из работающего screen, не прерывая его работу, командой: <br>
+ctrl+a, d (при нажатой ctrl жмем а, отпускаем их, и затем жмем d)</p>
+
+<p>Далее, чтобы зайти в screen работающего бота, введите команду: <br>
+screen -x BybitFutures <br>
+То есть, второй раз вводить <br>
+screen -S BybitFutures <br>
+не нужно, а то создастся еще одна screen-сессия.</p>
+
+
+</html>
+	</section>
+	
+	<footer>
+	<a href="index.html" title="Боты серии E-Bot">Главная</a><br />
+	</footer>
+	</div>
+</body>
+</html>
