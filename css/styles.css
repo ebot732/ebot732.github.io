@@ -602,8 +602,8 @@ ul, ol {
 /*works gallery *******************************/
 
 .works__header{
-	padding-top: 110px;
-	padding-bottom: 30px;
+	padding-top: 10px;
+	padding-bottom: 10px;
 }
 
 .works__header:after{
