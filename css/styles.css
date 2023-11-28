@@ -192,8 +192,9 @@ ul, ol {
 	width: 100%;
 	min-height: 100vh;
 	margin: 0 auto;
-	font-size: 18px;
+	font-size: 16px;
 	position: relative;
+	background-color: rgba(224, 220, 255); 
 }
 
 .slider__item{
