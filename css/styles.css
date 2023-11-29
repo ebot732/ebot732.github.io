@@ -106,6 +106,1090 @@
 	cursor: pointer;
 }
 
+
+/* Контейнер для кнопки */
+.css-modal-checkbox-container3 {
+	height: 60px;
+	display:flex;
+	align-items:center;
+	justify-content:right;
+}
+/* Убираем флажок */
+#css-modal-checkbox3 {
+	display: none;
+}
+/* Кнопка для открытия */
+.css-modal-checkbox3 {
+	display: inline-flex;
+	margin: 10px;
+	text-decoration: none;
+	position: relative;
+	font-size: 20px;
+	line-height: 20px;
+	padding: 10px 15px;
+	color: #FFF;
+	font-weight: normal;
+	text-transform: uppercase;
+	font-family: 'Roboto', Тahoma, sans-serif;
+	background: #transparent;
+	cursor: pointer;
+	border: transparent;
+	overflow: hidden;
+	z-index: 1;	
+}
+.css-modal-checkbox3:hover,
+.css-modal-checkbox3:active,
+.css-modal-checkbox3:focus {
+	color: #FFF;
+}
+.css-modal-checkbox3:before {
+	content: '';
+	position: absolute;
+	top: 0;
+	right: -50px;
+	bottom: 0;
+	left: 0;
+	border-right: 50px solid transparent;
+	border-top: 50px solid #2D6B9F;
+	transition: transform 0.5s;
+	transform: translateX(-100%);
+	z-index: -1;
+}
+.css-modal-checkbox3:hover:before,
+.css-modal-checkbox3:active:before,
+.css-modal-checkbox3:focus:before {
+	transform: translateX(0);
+}
+
+/* Контейнер, который затемняет страницу */
+#css-modal-checkbox3 + .cmc {
+    display: none;
+}
+#css-modal-checkbox3:checked + .cmc {
+	display:flex;
+	align-items:center;
+	justify-content:center;	
+	z-index: 4;
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	animation: bg 0.5s ease;
+	background: rgba(51, 122, 183, 0.7);
+}
+
+/* Модальное окно */
+#css-modal-checkbox3:checked + .cmc .cmt {
+	font-family: Verdana, sans-serif;  
+	font-size: 16px;
+	padding: 20px;
+	width:80%;
+	max-width: 400px;
+	max-height: 100%;
+	transition: 0.5s;
+	border: 6px solid #BFE2FF;
+	border-radius: 12px;
+	background: #FFF;
+	box-shadow: 0 4px 12px rgba(0,0,0,0.2), 0 16px 20px rgba(0,0,0,0.2);
+	text-align: center;
+	overflow: auto;
+	animation: scale 0.5s ease;
+}
+/* Кнопка с крестиком закрывающая окно */
+.css-modal-close3 {
+	width: 50px;
+	height: 50px;
+	border: 6px solid #BFE2FF;
+	border-radius: 12px;
+	position: absolute;
+	z-index: 10;
+	top: 20px;
+	right: 20px;
+	box-shadow: 0 4px 12px rgba(0,0,0,0.2), 0 16px 20px rgba(0,0,0,0.2);
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23337AB7' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3e%3cline x1='18' y1='6' x2='6' y2='18'%3e%3c/line%3e%3cline x1='6' y1='6' x2='18' y2='18'%3e%3c/line%3e%3c/svg%3e");
+	background-color: #FFF;
+	background-size: cover;
+	animation: move 0.5s ease;
+	cursor: pointer;
+}
+
+
+/* Контейнер для кнопки */
+.css-modal-checkbox-container4 {
+	height: 60px;
+	display:flex;
+	align-items:center;
+	justify-content:right;
+}
+/* Убираем флажок */
+#css-modal-checkbox4 {
+	display: none;
+}
+/* Кнопка для открытия */
+.css-modal-checkbox4 {
+	display: inline-flex;
+	margin: 10px;
+	text-decoration: none;
+	position: relative;
+	font-size: 20px;
+	line-height: 20px;
+	padding: 10px 15px;
+	color: #FFF;
+	font-weight: normal;
+	text-transform: uppercase;
+	font-family: 'Roboto', Тahoma, sans-serif;
+	background: #transparent;
+	cursor: pointer;
+	border: transparent;
+	overflow: hidden;
+	z-index: 1;	
+}
+.css-modal-checkbox4:hover,
+.css-modal-checkbox4:active,
+.css-modal-checkbox4:focus {
+	color: #FFF;
+}
+.css-modal-checkbox4:before {
+	content: '';
+	position: absolute;
+	top: 0;
+	right: -50px;
+	bottom: 0;
+	left: 0;
+	border-right: 50px solid transparent;
+	border-top: 50px solid #2D6B9F;
+	transition: transform 0.5s;
+	transform: translateX(-100%);
+	z-index: -1;
+}
+.css-modal-checkbox4:hover:before,
+.css-modal-checkbox4:active:before,
+.css-modal-checkbox4:focus:before {
+	transform: translateX(0);
+}
+
+/* Контейнер, который затемняет страницу */
+#css-modal-checkbox4 + .cmc {
+    display: none;
+}
+#css-modal-checkbox4:checked + .cmc {
+	display:flex;
+	align-items:center;
+	justify-content:center;	
+	z-index: 4;
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	animation: bg 0.5s ease;
+	background: rgba(51, 122, 183, 0.7);
+}
+
+/* Модальное окно */
+#css-modal-checkbox4:checked + .cmc .cmt {
+	font-family: Verdana, sans-serif;  
+	font-size: 16px;
+	padding: 20px;
+	width:80%;
+	max-width: 400px;
+	max-height: 100%;
+	transition: 0.5s;
+	border: 6px solid #BFE2FF;
+	border-radius: 12px;
+	background: #FFF;
+	box-shadow: 0 4px 12px rgba(0,0,0,0.2), 0 16px 20px rgba(0,0,0,0.2);
+	text-align: center;
+	overflow: auto;
+	animation: scale 0.5s ease;
+}
+/* Кнопка с крестиком закрывающая окно */
+.css-modal-close4 {
+	width: 50px;
+	height: 50px;
+	border: 6px solid #BFE2FF;
+	border-radius: 12px;
+	position: absolute;
+	z-index: 10;
+	top: 20px;
+	right: 20px;
+	box-shadow: 0 4px 12px rgba(0,0,0,0.2), 0 16px 20px rgba(0,0,0,0.2);
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23337AB7' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3e%3cline x1='18' y1='6' x2='6' y2='18'%3e%3c/line%3e%3cline x1='6' y1='6' x2='18' y2='18'%3e%3c/line%3e%3c/svg%3e");
+	background-color: #FFF;
+	background-size: cover;
+	animation: move 0.5s ease;
+	cursor: pointer;
+}
+
+
+/* Контейнер для кнопки */
+.css-modal-checkbox-container5 {
+	height: 60px;
+	display:flex;
+	align-items:center;
+	justify-content:right;
+}
+/* Убираем флажок */
+#css-modal-checkbox5 {
+	display: none;
+}
+/* Кнопка для открытия */
+.css-modal-checkbox5 {
+	display: inline-flex;
+	margin: 10px;
+	text-decoration: none;
+	position: relative;
+	font-size: 20px;
+	line-height: 20px;
+	padding: 10px 15px;
+	color: #FFF;
+	font-weight: normal;
+	text-transform: uppercase;
+	font-family: 'Roboto', Тahoma, sans-serif;
+	background: #transparent;
+	cursor: pointer;
+	border: transparent;
+	overflow: hidden;
+	z-index: 1;	
+}
+.css-modal-checkbox5:hover,
+.css-modal-checkbox5:active,
+.css-modal-checkbox5:focus {
+	color: #FFF;
+}
+.css-modal-checkbox5:before {
+	content: '';
+	position: absolute;
+	top: 0;
+	right: -50px;
+	bottom: 0;
+	left: 0;
+	border-right: 50px solid transparent;
+	border-top: 50px solid #2D6B9F;
+	transition: transform 0.5s;
+	transform: translateX(-100%);
+	z-index: -1;
+}
+.css-modal-checkbox5:hover:before,
+.css-modal-checkbox5:active:before,
+.css-modal-checkbox5:focus:before {
+	transform: translateX(0);
+}
+
+/* Контейнер, который затемняет страницу */
+#css-modal-checkbox5 + .cmc {
+    display: none;
+}
+#css-modal-checkbox5:checked + .cmc {
+	display:flex;
+	align-items:center;
+	justify-content:center;	
+	z-index: 4;
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	animation: bg 0.5s ease;
+	background: rgba(51, 122, 183, 0.7);
+}
+
+/* Модальное окно */
+#css-modal-checkbox5:checked + .cmc .cmt {
+	font-family: Verdana, sans-serif;  
+	font-size: 16px;
+	padding: 20px;
+	width:80%;
+	max-width: 400px;
+	max-height: 100%;
+	transition: 0.5s;
+	border: 6px solid #BFE2FF;
+	border-radius: 12px;
+	background: #FFF;
+	box-shadow: 0 4px 12px rgba(0,0,0,0.2), 0 16px 20px rgba(0,0,0,0.2);
+	text-align: center;
+	overflow: auto;
+	animation: scale 0.5s ease;
+}
+/* Кнопка с крестиком закрывающая окно */
+.css-modal-close5 {
+	width: 50px;
+	height: 50px;
+	border: 6px solid #BFE2FF;
+	border-radius: 12px;
+	position: absolute;
+	z-index: 10;
+	top: 20px;
+	right: 20px;
+	box-shadow: 0 4px 12px rgba(0,0,0,0.2), 0 16px 20px rgba(0,0,0,0.2);
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23337AB7' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3e%3cline x1='18' y1='6' x2='6' y2='18'%3e%3c/line%3e%3cline x1='6' y1='6' x2='18' y2='18'%3e%3c/line%3e%3c/svg%3e");
+	background-color: #FFF;
+	background-size: cover;
+	animation: move 0.5s ease;
+	cursor: pointer;
+}
+
+
+/* Контейнер для кнопки */
+.css-modal-checkbox-container6 {
+	height: 60px;
+	display:flex;
+	align-items:center;
+	justify-content:right;
+}
+/* Убираем флажок */
+#css-modal-checkbox6 {
+	display: none;
+}
+/* Кнопка для открытия */
+.css-modal-checkbox6 {
+	display: inline-flex;
+	margin: 10px;
+	text-decoration: none;
+	position: relative;
+	font-size: 20px;
+	line-height: 20px;
+	padding: 10px 15px;
+	color: #FFF;
+	font-weight: normal;
+	text-transform: uppercase;
+	font-family: 'Roboto', Тahoma, sans-serif;
+	background: #transparent;
+	cursor: pointer;
+	border: transparent;
+	overflow: hidden;
+	z-index: 1;	
+}
+.css-modal-checkbox6:hover,
+.css-modal-checkbox6:active,
+.css-modal-checkbox6:focus {
+	color: #FFF;
+}
+.css-modal-checkbox6:before {
+	content: '';
+	position: absolute;
+	top: 0;
+	right: -50px;
+	bottom: 0;
+	left: 0;
+	border-right: 50px solid transparent;
+	border-top: 50px solid #2D6B9F;
+	transition: transform 0.5s;
+	transform: translateX(-100%);
+	z-index: -1;
+}
+.css-modal-checkbox6:hover:before,
+.css-modal-checkbox6:active:before,
+.css-modal-checkbox6:focus:before {
+	transform: translateX(0);
+}
+
+/* Контейнер, который затемняет страницу */
+#css-modal-checkbox6 + .cmc {
+    display: none;
+}
+#css-modal-checkbox6:checked + .cmc {
+	display:flex;
+	align-items:center;
+	justify-content:center;	
+	z-index: 4;
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	animation: bg 0.5s ease;
+	background: rgba(51, 122, 183, 0.7);
+}
+
+/* Модальное окно */
+#css-modal-checkbox6:checked + .cmc .cmt {
+	font-family: Verdana, sans-serif;  
+	font-size: 16px;
+	padding: 20px;
+	width:80%;
+	max-width: 400px;
+	max-height: 100%;
+	transition: 0.5s;
+	border: 6px solid #BFE2FF;
+	border-radius: 12px;
+	background: #FFF;
+	box-shadow: 0 4px 12px rgba(0,0,0,0.2), 0 16px 20px rgba(0,0,0,0.2);
+	text-align: center;
+	overflow: auto;
+	animation: scale 0.5s ease;
+}
+/* Кнопка с крестиком закрывающая окно */
+.css-modal-close6 {
+	width: 50px;
+	height: 50px;
+	border: 6px solid #BFE2FF;
+	border-radius: 12px;
+	position: absolute;
+	z-index: 10;
+	top: 20px;
+	right: 20px;
+	box-shadow: 0 4px 12px rgba(0,0,0,0.2), 0 16px 20px rgba(0,0,0,0.2);
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23337AB7' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3e%3cline x1='18' y1='6' x2='6' y2='18'%3e%3c/line%3e%3cline x1='6' y1='6' x2='18' y2='18'%3e%3c/line%3e%3c/svg%3e");
+	background-color: #FFF;
+	background-size: cover;
+	animation: move 0.5s ease;
+	cursor: pointer;
+}
+
+
+/* Контейнер для кнопки */
+.css-modal-checkbox-container7 {
+	height: 60px;
+	display:flex;
+	align-items:center;
+	justify-content:right;
+}
+/* Убираем флажок */
+#css-modal-checkbox7 {
+	display: none;
+}
+/* Кнопка для открытия */
+.css-modal-checkbox7 {
+	display: inline-flex;
+	margin: 10px;
+	text-decoration: none;
+	position: relative;
+	font-size: 20px;
+	line-height: 20px;
+	padding: 10px 15px;
+	color: #FFF;
+	font-weight: normal;
+	text-transform: uppercase;
+	font-family: 'Roboto', Тahoma, sans-serif;
+	background: #transparent;
+	cursor: pointer;
+	border: transparent;
+	overflow: hidden;
+	z-index: 1;	
+}
+.css-modal-checkbox7:hover,
+.css-modal-checkbox7:active,
+.css-modal-checkbox7:focus {
+	color: #FFF;
+}
+.css-modal-checkbox7:before {
+	content: '';
+	position: absolute;
+	top: 0;
+	right: -50px;
+	bottom: 0;
+	left: 0;
+	border-right: 50px solid transparent;
+	border-top: 50px solid #2D6B9F;
+	transition: transform 0.5s;
+	transform: translateX(-100%);
+	z-index: -1;
+}
+.css-modal-checkbox7:hover:before,
+.css-modal-checkbox7:active:before,
+.css-modal-checkbox7:focus:before {
+	transform: translateX(0);
+}
+
+/* Контейнер, который затемняет страницу */
+#css-modal-checkbox7 + .cmc {
+    display: none;
+}
+#css-modal-checkbox7:checked + .cmc {
+	display:flex;
+	align-items:center;
+	justify-content:center;	
+	z-index: 4;
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	animation: bg 0.5s ease;
+	background: rgba(51, 122, 183, 0.7);
+}
+
+/* Модальное окно */
+#css-modal-checkbox7:checked + .cmc .cmt {
+	font-family: Verdana, sans-serif;  
+	font-size: 16px;
+	padding: 20px;
+	width:80%;
+	max-width: 400px;
+	max-height: 100%;
+	transition: 0.5s;
+	border: 6px solid #BFE2FF;
+	border-radius: 12px;
+	background: #FFF;
+	box-shadow: 0 4px 12px rgba(0,0,0,0.2), 0 16px 20px rgba(0,0,0,0.2);
+	text-align: center;
+	overflow: auto;
+	animation: scale 0.5s ease;
+}
+/* Кнопка с крестиком закрывающая окно */
+.css-modal-close7 {
+	width: 50px;
+	height: 50px;
+	border: 6px solid #BFE2FF;
+	border-radius: 12px;
+	position: absolute;
+	z-index: 10;
+	top: 20px;
+	right: 20px;
+	box-shadow: 0 4px 12px rgba(0,0,0,0.2), 0 16px 20px rgba(0,0,0,0.2);
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23337AB7' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3e%3cline x1='18' y1='6' x2='6' y2='18'%3e%3c/line%3e%3cline x1='6' y1='6' x2='18' y2='18'%3e%3c/line%3e%3c/svg%3e");
+	background-color: #FFF;
+	background-size: cover;
+	animation: move 0.5s ease;
+	cursor: pointer;
+}
+
+
+/* Контейнер для кнопки */
+.css-modal-checkbox-container8 {
+	height: 60px;
+	display:flex;
+	align-items:center;
+	justify-content:right;
+}
+/* Убираем флажок */
+#css-modal-checkbox8 {
+	display: none;
+}
+/* Кнопка для открытия */
+.css-modal-checkbox8 {
+	display: inline-flex;
+	margin: 10px;
+	text-decoration: none;
+	position: relative;
+	font-size: 20px;
+	line-height: 20px;
+	padding: 10px 15px;
+	color: #FFF;
+	font-weight: normal;
+	text-transform: uppercase;
+	font-family: 'Roboto', Тahoma, sans-serif;
+	background: #transparent;
+	cursor: pointer;
+	border: transparent;
+	overflow: hidden;
+	z-index: 1;	
+}
+.css-modal-checkbox8:hover,
+.css-modal-checkbox8:active,
+.css-modal-checkbox8:focus {
+	color: #FFF;
+}
+.css-modal-checkbox8:before {
+	content: '';
+	position: absolute;
+	top: 0;
+	right: -50px;
+	bottom: 0;
+	left: 0;
+	border-right: 50px solid transparent;
+	border-top: 50px solid #2D6B9F;
+	transition: transform 0.5s;
+	transform: translateX(-100%);
+	z-index: -1;
+}
+.css-modal-checkbox8:hover:before,
+.css-modal-checkbox8:active:before,
+.css-modal-checkbox8:focus:before {
+	transform: translateX(0);
+}
+
+/* Контейнер, который затемняет страницу */
+#css-modal-checkbox8 + .cmc {
+    display: none;
+}
+#css-modal-checkbox8:checked + .cmc {
+	display:flex;
+	align-items:center;
+	justify-content:center;	
+	z-index: 4;
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	animation: bg 0.5s ease;
+	background: rgba(51, 122, 183, 0.7);
+}
+
+/* Модальное окно */
+#css-modal-checkbox8:checked + .cmc .cmt {
+	font-family: Verdana, sans-serif;  
+	font-size: 16px;
+	padding: 20px;
+	width:80%;
+	max-width: 400px;
+	max-height: 100%;
+	transition: 0.5s;
+	border: 6px solid #BFE2FF;
+	border-radius: 12px;
+	background: #FFF;
+	box-shadow: 0 4px 12px rgba(0,0,0,0.2), 0 16px 20px rgba(0,0,0,0.2);
+	text-align: center;
+	overflow: auto;
+	animation: scale 0.5s ease;
+}
+/* Кнопка с крестиком закрывающая окно */
+.css-modal-close8 {
+	width: 50px;
+	height: 50px;
+	border: 6px solid #BFE2FF;
+	border-radius: 12px;
+	position: absolute;
+	z-index: 10;
+	top: 20px;
+	right: 20px;
+	box-shadow: 0 4px 12px rgba(0,0,0,0.2), 0 16px 20px rgba(0,0,0,0.2);
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23337AB7' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3e%3cline x1='18' y1='6' x2='6' y2='18'%3e%3c/line%3e%3cline x1='6' y1='6' x2='18' y2='18'%3e%3c/line%3e%3c/svg%3e");
+	background-color: #FFF;
+	background-size: cover;
+	animation: move 0.5s ease;
+	cursor: pointer;
+}
+
+
+/* Контейнер для кнопки */
+.css-modal-checkbox-container9 {
+	height: 60px;
+	display:flex;
+	align-items:center;
+	justify-content:right;
+}
+/* Убираем флажок */
+#css-modal-checkbox9 {
+	display: none;
+}
+/* Кнопка для открытия */
+.css-modal-checkbox9 {
+	display: inline-flex;
+	margin: 10px;
+	text-decoration: none;
+	position: relative;
+	font-size: 20px;
+	line-height: 20px;
+	padding: 10px 15px;
+	color: #FFF;
+	font-weight: normal;
+	text-transform: uppercase;
+	font-family: 'Roboto', Тahoma, sans-serif;
+	background: #transparent;
+	cursor: pointer;
+	border: transparent;
+	overflow: hidden;
+	z-index: 1;	
+}
+.css-modal-checkbox9:hover,
+.css-modal-checkbox9:active,
+.css-modal-checkbox9:focus {
+	color: #FFF;
+}
+.css-modal-checkbox9:before {
+	content: '';
+	position: absolute;
+	top: 0;
+	right: -50px;
+	bottom: 0;
+	left: 0;
+	border-right: 50px solid transparent;
+	border-top: 50px solid #2D6B9F;
+	transition: transform 0.5s;
+	transform: translateX(-100%);
+	z-index: -1;
+}
+.css-modal-checkbox9:hover:before,
+.css-modal-checkbox9:active:before,
+.css-modal-checkbox9:focus:before {
+	transform: translateX(0);
+}
+
+/* Контейнер, который затемняет страницу */
+#css-modal-checkbox9 + .cmc {
+    display: none;
+}
+#css-modal-checkbox9:checked + .cmc {
+	display:flex;
+	align-items:center;
+	justify-content:center;	
+	z-index: 4;
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	animation: bg 0.5s ease;
+	background: rgba(51, 122, 183, 0.7);
+}
+
+/* Модальное окно */
+#css-modal-checkbox9:checked + .cmc .cmt {
+	font-family: Verdana, sans-serif;  
+	font-size: 16px;
+	padding: 20px;
+	width:80%;
+	max-width: 400px;
+	max-height: 100%;
+	transition: 0.5s;
+	border: 6px solid #BFE2FF;
+	border-radius: 12px;
+	background: #FFF;
+	box-shadow: 0 4px 12px rgba(0,0,0,0.2), 0 16px 20px rgba(0,0,0,0.2);
+	text-align: center;
+	overflow: auto;
+	animation: scale 0.5s ease;
+}
+/* Кнопка с крестиком закрывающая окно */
+.css-modal-close9 {
+	width: 50px;
+	height: 50px;
+	border: 6px solid #BFE2FF;
+	border-radius: 12px;
+	position: absolute;
+	z-index: 10;
+	top: 20px;
+	right: 20px;
+	box-shadow: 0 4px 12px rgba(0,0,0,0.2), 0 16px 20px rgba(0,0,0,0.2);
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23337AB7' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3e%3cline x1='18' y1='6' x2='6' y2='18'%3e%3c/line%3e%3cline x1='6' y1='6' x2='18' y2='18'%3e%3c/line%3e%3c/svg%3e");
+	background-color: #FFF;
+	background-size: cover;
+	animation: move 0.5s ease;
+	cursor: pointer;
+}
+
+
+/* Контейнер для кнопки */
+.css-modal-checkbox-container10 {
+	height: 60px;
+	display:flex;
+	align-items:center;
+	justify-content:right;
+}
+/* Убираем флажок */
+#css-modal-checkbox10 {
+	display: none;
+}
+/* Кнопка для открытия */
+.css-modal-checkbox10 {
+	display: inline-flex;
+	margin: 10px;
+	text-decoration: none;
+	position: relative;
+	font-size: 20px;
+	line-height: 20px;
+	padding: 10px 15px;
+	color: #FFF;
+	font-weight: normal;
+	text-transform: uppercase;
+	font-family: 'Roboto', Тahoma, sans-serif;
+	background: #transparent;
+	cursor: pointer;
+	border: transparent;
+	overflow: hidden;
+	z-index: 1;	
+}
+.css-modal-checkbox10:hover,
+.css-modal-checkbox10:active,
+.css-modal-checkbox10:focus {
+	color: #FFF;
+}
+.css-modal-checkbox10:before {
+	content: '';
+	position: absolute;
+	top: 0;
+	right: -50px;
+	bottom: 0;
+	left: 0;
+	border-right: 50px solid transparent;
+	border-top: 50px solid #2D6B9F;
+	transition: transform 0.5s;
+	transform: translateX(-100%);
+	z-index: -1;
+}
+.css-modal-checkbox10:hover:before,
+.css-modal-checkbox10:active:before,
+.css-modal-checkbox10:focus:before {
+	transform: translateX(0);
+}
+
+/* Контейнер, который затемняет страницу */
+#css-modal-checkbox10 + .cmc {
+    display: none;
+}
+#css-modal-checkbox10:checked + .cmc {
+	display:flex;
+	align-items:center;
+	justify-content:center;	
+	z-index: 4;
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	animation: bg 0.5s ease;
+	background: rgba(51, 122, 183, 0.7);
+}
+
+/* Модальное окно */
+#css-modal-checkbox10:checked + .cmc .cmt {
+	font-family: Verdana, sans-serif;  
+	font-size: 16px;
+	padding: 20px;
+	width:80%;
+	max-width: 400px;
+	max-height: 100%;
+	transition: 0.5s;
+	border: 6px solid #BFE2FF;
+	border-radius: 12px;
+	background: #FFF;
+	box-shadow: 0 4px 12px rgba(0,0,0,0.2), 0 16px 20px rgba(0,0,0,0.2);
+	text-align: center;
+	overflow: auto;
+	animation: scale 0.5s ease;
+}
+/* Кнопка с крестиком закрывающая окно */
+.css-modal-close10 {
+	width: 50px;
+	height: 50px;
+	border: 6px solid #BFE2FF;
+	border-radius: 12px;
+	position: absolute;
+	z-index: 10;
+	top: 20px;
+	right: 20px;
+	box-shadow: 0 4px 12px rgba(0,0,0,0.2), 0 16px 20px rgba(0,0,0,0.2);
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23337AB7' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3e%3cline x1='18' y1='6' x2='6' y2='18'%3e%3c/line%3e%3cline x1='6' y1='6' x2='18' y2='18'%3e%3c/line%3e%3c/svg%3e");
+	background-color: #FFF;
+	background-size: cover;
+	animation: move 0.5s ease;
+	cursor: pointer;
+}
+
+
+/* Контейнер для кнопки */
+.css-modal-checkbox-container11 {
+	height: 60px;
+	display:flex;
+	align-items:center;
+	justify-content:right;
+}
+/* Убираем флажок */
+#css-modal-checkbox11 {
+	display: none;
+}
+/* Кнопка для открытия */
+.css-modal-checkbox11 {
+	display: inline-flex;
+	margin: 10px;
+	text-decoration: none;
+	position: relative;
+	font-size: 20px;
+	line-height: 20px;
+	padding: 10px 15px;
+	color: #FFF;
+	font-weight: normal;
+	text-transform: uppercase;
+	font-family: 'Roboto', Тahoma, sans-serif;
+	background: #transparent;
+	cursor: pointer;
+	border: transparent;
+	overflow: hidden;
+	z-index: 1;	
+}
+.css-modal-checkbox11:hover,
+.css-modal-checkbox11:active,
+.css-modal-checkbox11:focus {
+	color: #FFF;
+}
+.css-modal-checkbox11:before {
+	content: '';
+	position: absolute;
+	top: 0;
+	right: -50px;
+	bottom: 0;
+	left: 0;
+	border-right: 50px solid transparent;
+	border-top: 50px solid #2D6B9F;
+	transition: transform 0.5s;
+	transform: translateX(-100%);
+	z-index: -1;
+}
+.css-modal-checkbox11:hover:before,
+.css-modal-checkbox11:active:before,
+.css-modal-checkbox11:focus:before {
+	transform: translateX(0);
+}
+
+/* Контейнер, который затемняет страницу */
+#css-modal-checkbox11 + .cmc {
+    display: none;
+}
+#css-modal-checkbox11:checked + .cmc {
+	display:flex;
+	align-items:center;
+	justify-content:center;	
+	z-index: 4;
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	animation: bg 0.5s ease;
+	background: rgba(51, 122, 183, 0.7);
+}
+
+/* Модальное окно */
+#css-modal-checkbox11:checked + .cmc .cmt {
+	font-family: Verdana, sans-serif;  
+	font-size: 16px;
+	padding: 20px;
+	width:80%;
+	max-width: 400px;
+	max-height: 100%;
+	transition: 0.5s;
+	border: 6px solid #BFE2FF;
+	border-radius: 12px;
+	background: #FFF;
+	box-shadow: 0 4px 12px rgba(0,0,0,0.2), 0 16px 20px rgba(0,0,0,0.2);
+	text-align: center;
+	overflow: auto;
+	animation: scale 0.5s ease;
+}
+/* Кнопка с крестиком закрывающая окно */
+.css-modal-close11 {
+	width: 50px;
+	height: 50px;
+	border: 6px solid #BFE2FF;
+	border-radius: 12px;
+	position: absolute;
+	z-index: 10;
+	top: 20px;
+	right: 20px;
+	box-shadow: 0 4px 12px rgba(0,0,0,0.2), 0 16px 20px rgba(0,0,0,0.2);
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23337AB7' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3e%3cline x1='18' y1='6' x2='6' y2='18'%3e%3c/line%3e%3cline x1='6' y1='6' x2='18' y2='18'%3e%3c/line%3e%3c/svg%3e");
+	background-color: #FFF;
+	background-size: cover;
+	animation: move 0.5s ease;
+	cursor: pointer;
+}
+
+
+/* Контейнер для кнопки */
+.css-modal-checkbox-container12 {
+	height: 60px;
+	display:flex;
+	align-items:center;
+	justify-content:right;
+}
+/* Убираем флажок */
+#css-modal-checkbox12 {
+	display: none;
+}
+/* Кнопка для открытия */
+.css-modal-checkbox12 {
+	display: inline-flex;
+	margin: 10px;
+	text-decoration: none;
+	position: relative;
+	font-size: 20px;
+	line-height: 20px;
+	padding: 10px 15px;
+	color: #FFF;
+	font-weight: normal;
+	text-transform: uppercase;
+	font-family: 'Roboto', Тahoma, sans-serif;
+	background: #transparent;
+	cursor: pointer;
+	border: transparent;
+	overflow: hidden;
+	z-index: 1;	
+}
+.css-modal-checkbox12:hover,
+.css-modal-checkbox12:active,
+.css-modal-checkbox12:focus {
+	color: #FFF;
+}
+.css-modal-checkbox12:before {
+	content: '';
+	position: absolute;
+	top: 0;
+	right: -50px;
+	bottom: 0;
+	left: 0;
+	border-right: 50px solid transparent;
+	border-top: 50px solid #2D6B9F;
+	transition: transform 0.5s;
+	transform: translateX(-100%);
+	z-index: -1;
+}
+.css-modal-checkbox12:hover:before,
+.css-modal-checkbox12:active:before,
+.css-modal-checkbox12:focus:before {
+	transform: translateX(0);
+}
+
+/* Контейнер, который затемняет страницу */
+#css-modal-checkbox12 + .cmc {
+    display: none;
+}
+#css-modal-checkbox12:checked + .cmc {
+	display:flex;
+	align-items:center;
+	justify-content:center;	
+	z-index: 4;
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	animation: bg 0.5s ease;
+	background: rgba(51, 122, 183, 0.7);
+}
+
+/* Модальное окно */
+#css-modal-checkbox12:checked + .cmc .cmt {
+	font-family: Verdana, sans-serif;  
+	font-size: 16px;
+	padding: 20px;
+	width:80%;
+	max-width: 400px;
+	max-height: 100%;
+	transition: 0.5s;
+	border: 6px solid #BFE2FF;
+	border-radius: 12px;
+	background: #FFF;
+	box-shadow: 0 4px 12px rgba(0,0,0,0.2), 0 16px 20px rgba(0,0,0,0.2);
+	text-align: center;
+	overflow: auto;
+	animation: scale 0.5s ease;
+}
+/* Кнопка с крестиком закрывающая окно */
+.css-modal-close12 {
+	width: 50px;
+	height: 50px;
+	border: 6px solid #BFE2FF;
+	border-radius: 12px;
+	position: absolute;
+	z-index: 10;
+	top: 20px;
+	right: 20px;
+	box-shadow: 0 4px 12px rgba(0,0,0,0.2), 0 16px 20px rgba(0,0,0,0.2);
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23337AB7' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3e%3cline x1='18' y1='6' x2='6' y2='18'%3e%3c/line%3e%3cline x1='6' y1='6' x2='18' y2='18'%3e%3c/line%3e%3c/svg%3e");
+	background-color: #FFF;
+	background-size: cover;
+	animation: move 0.5s ease;
+	cursor: pointer;
+}
+
+
+
+
+
 /* Анимации */
 @keyframes scale {
 	0% {
