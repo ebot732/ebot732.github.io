@@ -1432,7 +1432,7 @@ ul, ol {
 	display: block;
 	width: inherit;
 	height: inherit;
-	background-image: url(../images/logo/Floper.png);
+	
 	-webkit-background-size: cover;
 	        background-size: cover;
 }
@@ -1686,7 +1686,7 @@ ul, ol {
 .about{
 	width: 100%;
 	font-size: 16px;
-	background-image: url(../images/photos/about_background.jpg);
+	
 	background-repeat: no-repeat;
 	background-position: center center;
 	-webkit-background-size: cover;
@@ -1754,7 +1754,7 @@ ul, ol {
 }
 
 .video__item_poster{
-	background-image: url(../images/photos/video_cover.jpg);
+	
 	background-repeat: no-repeat;
 	background-position: 43% center;
 	-webkit-background-size: cover;
@@ -1792,7 +1792,7 @@ ul, ol {
 .play-outline{
 	display: inline-block;
 	width: 30px; height: 35px;
-	background-image: url(../images/icons/play.png);
+	
 	background-repeat: no-repeat;
 	background-position: center center;
 	-webkit-background-size: cover;
