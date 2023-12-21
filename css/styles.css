@@ -1574,6 +1574,11 @@ ul, ol {
 }
 
 .item__text_big{
+	color: #000;
+}
+.item__text_big2{
+    margin-top: 15px;
+	font-size: 37px;
 	color: #fff;
 }
 
