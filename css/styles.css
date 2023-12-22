@@ -2881,14 +2881,7 @@ ul, ol {
 	.mfp-content figcaption{
 		left: 65%;
 	}
-	.item__text_big{
-		margin-top: 22px;
-		font-size: 18px;
-	}
-	.item__text_big2{
-		margin-top: 20px;
-		font-size: 16px;
-	}
+
 	.mfp-bottom-bar{
 		left: -223px;
 	}
@@ -2911,12 +2904,8 @@ ul, ol {
 	}
 
 	.item__text_big{
-		margin-top: 12px;
-		font-size: 18px;
-	}
-	.item__text_big2{
 		margin-top: 10px;
-		font-size: 16px;
+		font-size: 21px;
 	}
 
 	.pointer_bottom{
