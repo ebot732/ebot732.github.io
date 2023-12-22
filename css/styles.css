@@ -2691,6 +2691,14 @@ ul, ol {
 	.clients-logos__image{
 		width: 32%;
 	}
+	.item__text_big{
+		margin-top: 22px;
+		font-size: 18px;
+	}
+	.item__text_big2{
+		margin-top: 20px;
+		font-size: 16px;
+	}
 }
 
 @media only screen and (max-width: 1024px){
