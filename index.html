@@ -47,6 +47,7 @@
 			<nav class="navigation header__nav">
 				<ul class="nav__list">
 					<li class="nav__item"><a href="#binfutures" class="nav__link"><span class="nav__item_underline"></span>E-BotFutures</a></li>
+                    <li class="nav__item"><a href="#hbot" class="nav__link"><span class="nav__item_underline"></span>H-BotFutur</a></li>
 					<li class="nav__item"><a href="#binspot" class="nav__link"><span class="nav__item_underline"></span>E-BotSpot</a></li>
 				</ul>
 			</nav>
@@ -64,8 +65,8 @@
 					<span class="item__text"></span>
 					<h1 class="item__text item__text_big">Здесь представлены боты для торговли на криптобиржах Binance, Bybit.</h1>
                     <h2 class="item__text item__text_big2">E-BotFutures для фьючерсов USDT Perpetual </h2>
+                    <h2 class="item__text item__text_big2">H-BotFutur для фьючерсов в Hedge Mode </h2>
                     <h2 class="item__text item__text_big2">E-BotSpot для торговли на спотовом рынке </h2>
-					
 				</div>
 			</div>
 		</div>
@@ -84,6 +85,7 @@
 			<nav class="navigation header__nav">
 				<ul class="nav__list">
 					<li class="nav__item current"><a href="#binfutures" class="nav__link"><span class="nav__item_underline"></span>E-BotFutures</a></li>
+					<li class="nav__item"><a href="#hbot" class="nav__link"><span class="nav__item_underline"></span>H-BotFutur</a></li>
 					<li class="nav__item"><a href="#binspot" class="nav__link"><span class="nav__item_underline"></span>E-BotSpot</a></li>
 					<li class="nav__item"><a href="index.html" class="nav__link"><span class="nav__item_underline"></span>Главная</a></li>
 				</ul>
@@ -455,6 +457,7 @@ sudo apt-get install --reinstall locales<br></p>
 			<nav class="navigation header__nav">
 				<ul class="nav__list">
 					<li class="nav__item"><a href="#binfutures" class="nav__link"><span class="nav__item_underline"></span>E-BotFutures</a></li>
+					<li class="nav__item"><a href="#hbot" class="nav__link"><span class="nav__item_underline"></span>H-BotFutur</a></li>
 					<li class="nav__item current"><a href="#binspot" class="nav__link"><span class="nav__item_underline"></span>E-BotSpot</a></li>
 					<li class="nav__item"><a href="index.html" class="nav__link"><span class="nav__item_underline"></span>Главная</a></li>
 				</ul>
@@ -808,13 +811,35 @@ sudo apt-get install --reinstall locales<br></p>
 						</div>
 					</div>
 				</div>
-		        <p></p>
+            
                         <a href="index.html" title="Боты E-Bot для Binance, Bybit.">Назад</a><br />
 			</div>
 		
 	
-<h2 class="col-xs-12 col-sm-3">H-BotFutur</h2>
-<p>H-BotFutur - бот для торговли на фьючерсах Binance и Bybit в режиме хэджирования (двустороннем режиме позиций,  Hedge Mode).<br>
+    
+<!--	H-BotFutur gallery
+*********************************-->
+	<section id="hbot" class="works section">
+		<div class="container">
+			<div class="row">
+			<!-- header and buttons of the gallery -->
+				<div class="works__header">
+					<h2 class="col-xs-12 col-sm-3">H-BotFutur</h2>
+					<nav class="works__header__nav col-xs-12 col-sm-9">
+                  
+			<nav class="navigation header__nav">
+				<ul class="nav__list">
+					<li class="nav__item"><a href="#binfutures" class="nav__link"><span class="nav__item_underline"></span>E-BotFutures</a></li>
+					<li class="nav__item"><a href="#hbot" class="nav__link"><span class="nav__item_underline"></span>H-BotFutur</a></li>
+					<li class="nav__item current"><a href="#binspot" class="nav__link"><span class="nav__item_underline"></span>E-BotSpot</a></li>
+					<li class="nav__item"><a href="index.html" class="nav__link"><span class="nav__item_underline"></span>Главная</a></li>
+				</ul>
+			</nav>
+					</nav>
+
+				</div>
+    
+<p>H-BotFutur - бот для торговли на фьючерсах Binance и Bybit в режиме хэджирования (двустороннем режиме позиций-  Hedge Mode).<br>
 Возможные направления работы: LONG/SHORT/AUTO.   <br>
 При AUTO бот откроет сразу и LONG и SHORT позиции по выбранной паре, выставит усредняющие ордера по этим позициям и 
 затем будет работать в направлении исполнившегося усред-ордера, а противоположная позиция
@@ -841,12 +866,81 @@ sudo apt-get install --reinstall locales<br></p>
  - курс пары за последние 24 часа изменился в заданном коридоре (с выбором в select_delta24- ближе к максимальному или минимальному значению коридора, или, вместо select_delta24, бот может смотреть объем последних 2-х свечей в коридоре измен цены за последние 24ч и выбрать пару с большим изменением).<br>
  
  <p>Режимы SUPER_ASSET, CONTROL_AUTO и MOST_CHANGED взаимоисключающие, т.е. при выборе одного из режимов другие режимы отключаются. Если не выбран ни один из режимов, бот будет работать в стандартном режиме.<br>
+
+<p>Настройки бота:<br>
+- Account Type- (только на Bybit) переключатель на Unified trading account или Classic trading account (Unified TA/Classic TA),<br>
+- fix_perc: процент повышения цены для продажи при LONG или падения для SHORT, <br>
+- step_aver: ввод step_aver1, step_aver2, ... step_aver7 шагов изменения цены для выставления усредов для  SHORT,<br>
+- qty_aver: ввод qty_aver1, qty_aver2, ... qty_aver7 для кратного увеличения объема выставляемого усред ордера для  SHORT,<br>
+- coef_LONG: коэффициент умножения для step_averLONG и для qty_averLONG, применяется со второго усреда,<br>
+- limit_aver: разрешенное количество усреднений,<br>
+- min_order: минимальная покупка (продажа) в котируемой валюте (например, в паре ETH/USDT это USDT, ставить больше 11 и учитывайте, что в зависимости от выбранного leverage (кредитного плеча) будет использоваться меньше USDT, например: если min_order указан 20, а leverage указан 10, то для ордера будет использовано 20/10=2 USDT),<br>
+- min_bal_perc: минимальный процент от депозита, ниже которого H-BotFutur не будет выставлять усредняющий ордер,<br>
+- delta_start: процент изменения цены для входа в сделку, нужно выбрать delta_start1 или delta_start2:<br>
+- delta_start1: на сколько % должен подняться курс от цены открытия выбранной дальней свечи до текущей цены для старта,<br>
+- delta_start2: на сколько % должен упасть курс от цены открытия выбранной дальней свечи до текущей цены для старта,<br>
+- delta_vol_start- на сколько % должен измениться объем торгов:
+    <p>-   (при interval_limit 2 (выборе 2-х свечей для анализа) бот будет сравнивать объемы текущей (еще не закрытой) и предыдущей (уже закрытой) свечей;
+    <p>-   при interval_limit 3 и более бот сравнит объемы текущей (еще не закрытой) и предыдущей (уже закрытой) свечей, выберет больший объем и будет сравнивать с объемом выбранной (3-й или больше) дальней свечи;
+    <p>-   при interval_limit 1 бот будет получать изменение объема всегда 0),<br>
+
+<p></p>
+- super_asset: пара для бесконечной торговли независимо от delta_start, при этом пары из white_list не будут работать (вводится командой -super_asset_add в формате ETHUSDT),<br>
+- time_stop_sa: время удержания пары в SUPER_ASSET, после которого при закрытии позиции бот вернется в режим СТАНДАРТНЫЙ или MOST_CHANGED, в минутах,<br>
+- after_sa_mch: выбор перехода после истечения таймера SUPER_ASSET в режим MOST_CHANGED или в СТАНДАРТНЫЙ,<br>
+
+- control_auto: режим удержания выбранной по стандартным параметрам пары всегда в позиции до достижения условий по изменению цены или времени, <br>
+- delta_stop: процент изменения цены для возврата после закрытия позиции в перебор-поиск пары, <br>
+- time_stop_ca: время удержания пары всегда в позиции после старта из перебора-поиска пары в минутах,<br>   
+
+- most_changed, режим выбора в коридоре измен цены за последн 24ч,<br>
+- delta24_min min изменение цены в коридоре для most_changed, <br>
+- delta24_max max изменение цены в коридоре для most_changed, <br>
+- select_delta24, выбирать ближе к max или min для most_changed, <br>  
+- delta_vol_most_ch, вместо select_delta24 смотреть объем последних 2-х свечей в коридоре измен цены за последн 24ч и выбрать пару с большим изменением, <br>
+- delta_vol_mc_interval,период свечей для использования в delta_vol_most_ch, <br>
+
+- send_aver_message: включение/выключение отправки сообщений в телеграм канал о каждом исполненном усредняющем ордере и о старте позиции, <br>
+- check_last_pair: проверять пару после закрытия позиции на соответствие условиям для входа и продолжения работы с ней, или сразу возвратиться в перебор пар,<br>
+
+- completed: поставить бота на паузу при закрытии очередной сделки (1-вкл/0-выкл),<br>
+- kline_interval: интервал свечей для анализа (1, 3, 5, 15, 30, 60, 120, 240, 360, 720 -в минутах, D -день, M -месяц, W -неделя),<br>
+- interval_limit: какое количество свечей анализируем (если следим за изменением цены за последние 3 минуты, то можно выбрать kline_interval 1m и interval_limit 3),<br>
+- manual_aver: команда для ручного усреднения по рынку, не дожидаясь цены лимитного усред-ордера, но не сработает, если усред-ордер, выставленный ботом, исполнен частично (PARTIALLY_FILLED),<br>
+- fix_loss: команда для закрытия открытой позиции по рынку,<br>
+- clear: сброс из базы данных сведений об открытых ботом ордерах,<br>
+- leverage: размер кредитного плеча от 1 до 100 (оно разное для разных пар, смотрите в лк биржи),<br>
+- marginType: тип маржи-tradeMode (cross margin | isolated margin), <br>
+- directionOnly: LONG, SHORT или AUTO (при AUTO бот будет работать в направлении первого исполнившегося усредняющего ордера. Изменение применится при старте новой позиции),<br>
+- insurance_pose: on или off (открывать страхующую позицию при заранее выбранном направлении работы LONG/SHORT), <br>
+- clos_insurpos_at_aver: в AUTO закрыть страхующую позу в плюс при исполнении очередного усреда (ввести № усреда или off), <br>
+- clos_insurpos_if_revers: в AUTO закрыть страхующую позу в плюс при определении разворота цены, ввести off <br>
+   <p> -   или в формате  2.1% aver 2 (первое число-откат цены в %, следующее № усреда, после исполнения которого бот начнет отслеживание разворота цены),
+   <p> -   или в формате  2.1% bef_aver 2 if 3.1% (первое число-откат цены в %, следующее № усреда, до цены исполнения которого за последнее число % бот начнет отслеживание разворота цены), 
+<p></p>
+- clear_profit: сброс из базы данных сведений о прибыли, <br>
+- t_sleep: при получении от биржи ошибки о превышении лимита api-запросов, можно выбрать значение паузы в секундах (например: 1, 3, 5, 7),<br>
+- t_sleep_perebor: пауза перед повтором перебора монет для выбора подходящей для старта (по умолчанию 40 сек), <br>
+- white_list: список пар, которые бот будет использовать для анализа и выбора подходящей для открытия сделки, <br>
+- api_key: открытый api-ключ от биржи с разрешением на фьючерсную торговлю, <br>
+- api_secret: секретный api-ключ от биржи, <br>
+- botID: api телеграм бота полученный от @BotFather (пример: 5656544920:AAHrXhjhujhfdf7RPJlheqJXEulBW), <br>
+- channelID: ID канала telegram бота для уведомлений, полученное от @userinfobot (пример: -1001656543985), <br>
+- tguserid: ID основного user-a телеграм, полученное от @userinfobot (пример: 346549043)<br>
+- use_testnet- включить использование бота в testnet (только для Binance и Bybit),<br>
+- licens_key: лицензионный ключ для продления периода работы бота, полученный от разработчика ,<br>
+- notif_fix_to_tel: возможность включения функции для отправки сообщений в телеграм-канал о фиксе /on/, или отключения /off/.<br>
+- quoteVolume24hr: минимальный 24-х часовой оборот торгов в котируемой валюте (в паре ETH/USDT это USDT, в паре ETH/BTC это BTC), чтобы бот взял пару из white_list в работу.<br>
+- small_id: ограничить количество знаков при выводе id ордера в терминале (1-50)<br>
+
+
+<p>Пример работы бота в терминале:</p>
 <p>
 <img src="screenshots/H-BotFut_terminal1.png" alt="Screenshot" style="max-width: 100%;">
 </p>
 <p>....</p>
 	 </div>
 </section>
-		
+                        <a href="index.html" title="Боты E-Bot для Binance, Bybit.">В начало</a><br />
 </body>
 </html>
