@@ -973,6 +973,8 @@ sudo apt-get install --reinstall locales<br></p>
 - use_testnet- включить использование бота в testnet (только для Binance и Bybit),<br>
 - licens_key: лицензионный ключ для продления периода работы бота, полученный от разработчика ,<br>
 - quoteVolume24hr: минимальный 24-х часовой оборот торгов в котируемой валюте (в паре ETH/USDT это USDT, в паре ETH/BTC это BTC), чтобы бот взял пару из white_list в работу.<br>
+- max_fund_rate: максимальная ставка комиссии за финансирование при выборе пары ,<br>
+- del_pair_after_check_funding: удалять или нет пару из white_list, если ставка комиссии выше, чем max_fund_rate ,<br>
 - small_id: ограничить количество знаков при выводе id ордера в терминале (1-50)<br>
 
 <p>Табличка H-BotFutur_aver-2.xls (<a href="https://github.com/ebot732/ebot732.github.io/raw/main/screenshots2/H-BotFutur_aver-2.xls">https://github.com/ebot732/ebot732.github.io/raw/main/screenshots2/H-BotFutur_aver-2.xls</a>) показывает приблизительные расчёты усреднений и цены ликвидации.</p>
