@@ -598,8 +598,7 @@ sudo apt-get install --reinstall locales<br></p>
 - min_bal_perc: указываем ограничивающий процент базовой валюты (ETH),<br>
 - delta_start1: указываем с минусом, например -1.7%, <br>
 - delta_start2: указываем плюсовой, например 1.7%, <br>
-- E-BotSpot сначала продает базовую валюту (ETH), затем выставляет FIX ордер на покупку дешевле и выставляет усредняющий SELL ордер на продажу дороже,<br>
-- прибыль можно накапливать как в котируемой валюте (USDT), так и частично в базовой (ETH).</p>
+- E-BotSpot сначала продает базовую валюту (ETH), затем выставляет FIX ордер на покупку дешевле и выставляет усредняющий SELL ордер на продажу дороже.</p>
 
 <p>Для новых пользователей первые 2 недели работы бота по запросу в телеграм бесплатные<br>
 <p>Здесь E-BotSpot представлен для ознакомления и использования в течении пробного периода до 15 января 2024 г.<br>
@@ -630,10 +629,10 @@ sudo apt-get install --reinstall locales<br></p>
 <p>Установка и запуск E-BotSpot:<br>
 - на VPS-сервере ubuntu 20 создайте новую папку, например, BinSpot ( mkdir BinSpot )<br>
 - зайдите в эту папку ( cd BinSpot )<br>
-- перенесите в эту папку файл бота E-BotSpot-30 (или скачайте с github командой: wget https://github.com/ebot732/E-BotSpot/releases/download/E-BotSpot-30/E-BotSpot-30)<br>
+- перенесите в эту папку файл бота E-BotSpot-3 <br>
 - откройте screen-сессию (например: screen -S BinSpot )<br>
-- дайте права запуска файлу (команда: chmod 755 E-BotSpot-30 )<br>
-- запустите E-BotSpot (команда: ./E-BotSpot-30 )<br>
+- дайте права запуска файлу (команда: chmod 755 E-BotSpot-3 )<br>
+- запустите E-BotSpot (команда: ./E-BotSpot-3 )<br>
 - команда для остановки бота: ctrl+c<br>
 - после запуска бота введите свои параметры: api_key и т.д.<br>
 - откорректируйте, при необходимости, настройки<br>
@@ -642,8 +641,17 @@ sudo apt-get install --reinstall locales<br></p>
 - для входа в screen работающего бота используйте команду: screen -x BinSpot</p>
 
 <p>Для удобства настройки E-BotSpot используется телеграм бот, которого нужно сделать админом в телеграм канале. 
-Необходимые данные телеграм бот возьмет из БД E-BotSpot и будет управляться через чат telegram-Botа.
-(<a href="https://github.com/ebot732/BinSpot/blob/main/README_telegram_uprav_bot.md/">https://github.com/ebot732/BinSpot/blob/main/README_telegram_uprav_bot.md/</a>)</p> 
+Необходимые данные телеграм бот возьмет из БД E-BotSpot и будет управляться через чат telegram-Botа.</p>
+<p>+'\n\n  \033[93m  Настройка телеграм бота для E-BotSpot <br>
+1. Создайте бота в телеграм, обратившись к @BotFather, получите api этого бота <br>
+2. Создайте частный канал для уведомлений, напишите в нем любое сообщение, перешлите его @userinfobot, получите id этого канала <br>
+3. Созданного телеграм бота сделайте админом в этом канале <br>
+4. Напишите любое сообщение @userinfobot, получите свой id в телеграм <br>
+5. Внесите полученные параметры в E-BotSpot (введя после запуска -edit): <br>
+-botID: api телеграм бота полученный от @BotFather (пример: 5656544920:AAHrXhjhujhfdf7RPJlheqJXEulBW) <br>
+-channelID: id канала telegram бота для уведомлений, полученное от @userinfobot (пример: -1001656543985) <br>
+-tguserid: id основного user-a телеграм, полученное от @userinfobot (пример: 346549043) <\p>
+	<p><\p>
 <p>Табличка BinSpot_averaged.xls (<a href="https://github.com/ebot732/BinSpot/raw/main/table/BinSpot-18_averaged.xls/">https://github.com/ebot732/BinSpot/raw/main/table/BinSpot-18_averaged.xls/</a>) показывает приблизительные расчёты усреднений.</p><br>
 <br>
 <h1 class="item__text item__text_big">Telegram чат: <a href="https://t.me/E_Bot_chat">https://t.me/E_Bot_chat</a></h1>
