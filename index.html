@@ -928,8 +928,7 @@ sudo apt-get install --reinstall locales<br></p>
  <p>Режимы SUPER_ASSET, CONTROL_AUTO, MOST_CHANGED, TV_SIGNALS, DOUBLE_CHECK, Quick_Price_Check и Tg_Tracking взаимоисключающие, т.е. при выборе одного из режимов другие режимы отключаются. Если не выбран ни один из режимов, бот будет работать в СТАНДАРТНОМ режиме.<br>
 
 <p>Настройки бота:<br>
-- Account Type- (только на Bybit) переключатель на Unified trading account или Classic trading account (Unified TA/Classic TA),<br>
-- fix_perc: процент повышения цены для продажи при LONG или падения для SHORT, <br>
+- fix_perc: процент повышения цены для продажи при LONG или падения для покупки при SHORT, <br>
 - trailing_FIX: возможность выставления TrailingStop ордера для FIX (on/off), <br>
 - trailingPricePercent: процент разворота цены для срабатывания TrailingStop ордера для FIX, <br>
 - step_aver-SHORT: ввод step_aver1, step_aver2, ... step_aver7 шагов изменения цены для выставления усредов для SHORT,<br>
@@ -938,6 +937,7 @@ sudo apt-get install --reinstall locales<br></p>
 - qty_aver-LONG: ввод qty_aver1, qty_aver2, ... qty_aver7 для кратного увеличения объема выставляемого усред ордера для LONG,<br>
 - limit_aver: разрешенное количество усреднений,<br>
 - min_order: минимальная покупка (продажа) в котируемой валюте (например, в паре ETH/USDT это USDT, ставить больше 11 и учитывайте, что в зависимости от выбранного leverage (кредитного плеча) будет использоваться меньше USDT, например: если min_order указан 20, а leverage указан 10, то для ордера будет использовано 20/10=2 USDT),<br>
+- timer_SL: функция закрытия позы (stop loss), если после № усреда прошло указанное кол-во минут, <br>
 - delta_start: процент изменения цены для входа в сделку, нужно выбрать delta_start1 или delta_start2:<br>
 - delta_start1: на сколько % должен подняться курс от цены открытия выбранной дальней свечи до текущей цены для старта,<br>
 - delta_start2: на сколько % должен упасть курс от цены открытия выбранной дальней свечи до текущей цены для старта,<br>
