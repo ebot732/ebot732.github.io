@@ -637,7 +637,137 @@
             }
         }
     </style>
+<!--
 </head>
+
+
+
+<head>
+    <meta charset="UTF-8">
+    <title>H-BotFutur - Бот для хеджирования на фьючерсах</title>
+-->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f8f9fa;
+        }
+        h1, h2, h3, h4 {
+            color: #2c3e50;
+            margin-top: 1.5em;
+            margin-bottom: 0.8em;
+        }
+        p {
+            margin-bottom: 15px;
+        }
+        .section {
+            margin-bottom: 30px;
+            padding: 20px;
+            border-left: 4px solid #3498db;
+            background-color: #fff;
+            border-radius: 0 8px 8px 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+        .subsection {
+            margin: 15px 0 15px 20px;
+            padding: 15px;
+            border-left: 3px solid #2ecc71;
+            background-color: #f8fafc;
+            border-radius: 0 6px 6px 0;
+        }
+        .note {
+            padding: 12px 15px;
+            background-color: #fffde7;
+            border-left: 4px solid #ffc107;
+            margin: 20px 0;
+            border-radius: 0 4px 4px 0;
+        }
+        .warning {
+            padding: 12px 15px;
+            background-color: #ffebee;
+            border-left: 4px solid #f44336;
+            margin: 20px 0;
+            border-radius: 0 4px 4px 0;
+        }
+        .info-box {
+            padding: 18px;
+            background-color: #e8f4fd;
+            border-radius: 6px;
+            margin: 20px 0;
+            border: 1px solid #bbdefb;
+        }
+        .code-block {
+            font-family: 'Courier New', monospace;
+            background-color: #f5f7f9;
+            padding: 12px;
+            border-radius: 4px;
+            margin: 15px 0;
+            overflow-x: auto;
+            border: 1px solid #e1e4e8;
+            font-size: 14px;
+        }
+        kbd {
+            background-color: #f1f3f5;
+            border-radius: 4px;
+            border: 1px solid #ced4da;
+            box-shadow: 0 1px 1px rgba(0,0,0,0.1);
+            color: #333;
+            display: inline-block;
+            font-family: 'Courier New', monospace;
+            font-size: 0.85em;
+            line-height: 1;
+            padding: 3px 6px;
+            white-space: nowrap;
+        }
+        ul, ol {
+            padding-left: 25px;
+            margin-bottom: 20px;
+        }
+        li {
+            margin-bottom: 10px;
+            line-height: 1.5;
+        }
+        a {
+            color: #1a73e8;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .param {
+            font-family: 'Courier New', monospace;
+            background-color: #f1f3f5;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-size: 0.95em;
+        }
+        .example {
+            font-style: italic;
+            color: #555;
+            margin: 5px 0 15px 0;
+            padding-left: 10px;
+            border-left: 2px solid #ccc;
+        }
+        .mode-title {
+            font-weight: bold;
+            color: #1a237e;
+            margin: 15px 0 8px 0;
+        }
+        .setting-title {
+            font-weight: bold;
+            color: #5e35b1;
+            margin: 15px 0 5px 0;
+        }
+    </style>
+</head>
+
+
+
 <body>
     <!-- Шапка -->
     <header>
@@ -674,9 +804,14 @@
         <div class="container">
             <h1>Профессиональные торговые боты для Binance и Bybit</h1>
             <p>Автоматизируйте свою торговлю криптовалютой с помощью наших продвинутых решений для фьючерсов, спота и хеджирования</p>
+            <p>E-BotFutures для фьючерсов USDT Perpetual в One Way</p>
+            <p>E-BotSpot для торговли на спотовом рынке</p>
+            <p>H-BotFutur для фьючерсов в Hedge Mode</p>
             <div class="hero-btns">
            <!-- <a href="#bots" class="btn">Выбрать бота</a> -->
+<!--
                 <a href="https://t.me/E_Bot_chat" target="_blank" class="btn btn-telegram"><i class="fab fa-telegram"></i> Наш Telegram</a>
+-->
             </div>
         </div>
     </section>
@@ -722,7 +857,8 @@
                     </div>
                 </div>
             </div>
-                
+
+<!--
 <!DOCTYPE html>
 <html lang="ru">
 <head>
@@ -809,6 +945,7 @@
         }
     </style>
 </head>
+-->
 <body>
     <h1>E-BotFutures - Торговый бот для криптобирж</h1>
 
@@ -823,7 +960,9 @@
             <p>Реферальная ссылка для регистрации на Bybit: 
                 <a href="https://www.bybit.com/invite?ref=8E183W">https://www.bybit.com/invite?ref=8E183W</a>
             </p>
+<!--
             <p>При работе на Bybit необходимо в настройках бота выставить параметр "Account Type" в нужное значение (Unified trading account или Classic trading account: Unified TA/Classic TA)</p>
+-->
         </div>
         
         <div class="subsection">
@@ -833,7 +972,7 @@
     </div>
 
     <div class="section">
-        <h2>Управление усреднением</h2>
+        <h2>Ограничение усреднений</h2>
         <div class="info-box">
             <p>Для ограничения использования усреднений нужно:</p>
             <ul>
@@ -919,7 +1058,7 @@
         </div>
         
         <div class="subsection">
-            <h3>Сценарии исполнения ордеров (для LONG)</h3>
+            <h3>Сценарии исполнения ордеров (для LONG, для SHORT- наоборот)</h3>
             <ul>
                 <li><strong>Исполнился sell-ордер (FIX-ордер):</strong> 
                     <ul>
@@ -980,6 +1119,8 @@
                 <li><code>min_order</code>: минимальная покупка/продажа в котируемой валюте</li>
                 <li><code>min_bal_perc</code>: минимальный процент от депозита для выставления усредняющего ордера</li>
                 <li><code>delta_start</code>: процент изменения цены для входа (выбрать delta_start1 или delta_start2)</li>
+                <li><code>delta_start1</code>: для LONG на сколько % должен подняться курс от цены открытия выбранной свечи до текущей для старта (для SHORT пишем со знаком минус, на сколько % должен упасть курс от цены открытия свечи до текущей)</li>
+                <li><code>delta_start2</code>: для LONG пишем со знаком минус, на сколько % должен упасть курс от цены открытия выбранной свечи до текущей для старта (для SHORT на сколько % должен подняться курс от цены открытия свечи до текущей)</li>
                 <li><code>delta_vol_start</code>: на сколько % должен увеличиться объем торгов последней свечи</li>
                 <li><code>control_auto</code>: режим удержания пары в позиции</li>
                 <li><code>delta_stop</code>: % изменения цены для возврата в поиск пары</li>
@@ -1029,7 +1170,9 @@
         <h2>Условия использования</h2>
         <ul>
             <li>Первые 2 недели работы бота бесплатные (по запросу в Telegram)</li>
+<!--
             <li>Пробный период до 15 января 2024 г.</li>
+-->
             <li>Для увеличения времени работы до 1/6/12 месяцев: напишите в Telegram</li>
             <li>На тестовой бирже срок работы 2 недели после запуска</li>
         </ul>
@@ -1045,7 +1188,7 @@
         </div>
         
         <div class="warning">
-            <p>E-BotFutures поставляется по принципу «как есть». Никаких гарантий не прилагается. Торговля на криптобиржах сопряжена с высоким риском.</p>
+            <p>E-BotFutures поставляется по принципу «как есть». Никаких гарантий не прилагается. Вы берете на себя весь риск относительно использования этого бота и должны понимать, что торговля на криптобиржах сопряжена с повышенным риском, и подходить к управлению рисками со всей ответственностью.</p>
         </div>
     </div>
 
@@ -1070,23 +1213,25 @@
         <div class="subsection">
             <h3>Инструкция по установке</h3>
             <ol>
-                <li>На VPS Ubuntu 20/22 создайте папку: 
+                <li>На VPS Ubuntu 20/22 создайте папку (например: BinFutures): 
                     <div class="code-block">mkdir BinFutures</div>
                 </li>
                 <li>Перейдите в папку:
                     <div class="code-block">cd BinFutures</div>
                 </li>
-                <li>Перенесите файл бота или скачайте:
+                <li>Перенесите в эту папку файл с ботом:
+<!--
                     <div class="code-block">wget https://github.com/ebot732/E-BotFutures/releases/download/E-BotFutures-30/E-BotFutures-30</div>
+-->
                 </li>
                 <li>Откройте screen-сессию:
                     <div class="code-block">screen -S BinFutures</div>
                 </li>
                 <li>Дайте права на запуск:
-                    <div class="code-block">chmod 755 E-BotFutures-30</div>
+                    <div class="code-block">chmod 755 E-BotFutures-2.1</div>
                 </li>
                 <li>Запустите бота:
-                    <div class="code-block">./E-BotFutures-30</div>
+                    <div class="code-block">./E-BotFutures-2.1</div>
                 </li>
                 <li>Введите параметры: API-ключи и настройки</li>
                 <li>Для остановки: <kbd>Ctrl+C</kbd></li>
@@ -1101,6 +1246,9 @@
             <h3>Telegram управление</h3>
             <p>Для управления ботом через Telegram: 
                 <a href="https://github.com/ebot732/BinFutures/blob/main/README_telegram_uprav_bot.md">Инструкция по настройке</a>
+            </p>
+            <p>Для приблизительных расчётов усреднений и цены ликвидации есть табличка BinFutures_averaged.xls: 
+                <a href="https://github.com/ebot732/BinFutures/raw/main/table/BinFutures-19_averaged.xls">BinFutures_averaged.xls</a>
             </p>
         </div>
         
@@ -1173,6 +1321,7 @@
                     </div>
                 </div>
                 </div>
+<!--
 <!DOCTYPE html>
 <html lang="ru">
 <head>
@@ -1259,6 +1408,7 @@
         }
     </style>
 </head>
+-->
 <body>
     <h1>E-BotSpot - Торговый бот для спотового рынка Binance и Bybit</h1>
 
@@ -1340,10 +1490,10 @@
         
         <div class="subsection">
             <h3>5. Quick_Price_Check режим</h3>
-            <p>Выбор пары по изменению цены от старта последней свечи до текущей цены:</p>
+            <p>Выбор пары по изменению цены от старта последней выбранной свечи до текущей цены:</p>
             <ul>
                 <li>Бот запускает вебсокеты на все пары из white_list</li>
-                <li>Сравнивает цену открытия свечи и последнюю цену</li>
+                <li>Сравнивает цену открытия свечи и последнюю цену (учитывайте, что последняя свеча еще не закрытая, поэтому от цены старта свечи до текущей цены может быть от 1 секунды до самого интервала-таймфрейма свечи)</li>
                 <li>Если delta попадает в заданный коридор - берет пару в работу</li>
             </ul>
         </div>
@@ -1409,7 +1559,7 @@
             <li>Запускайте в SCREEN (чтобы бот не отключался при разрыве SSH-соединения)</li>
             <li>Настройте telegram-бота и канал для получения информации о работе</li>
             <li>Остановка бота: <kbd>Ctrl+C</kbd> (не останавливайте в момент совершения сделок!)</li>
-            <li>В white_list можно внести от 1 до нескольких сотен пар</li>
+            <li>В white_list можно внести от 1 до нескольких сотен пар, главное, чтобы котируемая валюта была одна: если торгуете к USDT, то пары ETHUSDT, BTCUSDT, XRPUSDT и т.д., если торгуете к BTC, то пары ETHBTC, XRPBTC, DASHBTC и т.д.</li>
             <li>При изменении котируемой валюты меняйте min_order в настройках</li>
             <li>Для прокрутки терминала в SCREEN: <kbd>Ctrl+A</kbd>, <kbd>Esc</kbd> и стрелка вверх. Выход: <kbd>Esc</kbd>, <kbd>Esc</kbd></li>
         </ul>
@@ -1435,45 +1585,47 @@
         <div class="info-box">
             <ul>
                 <li><code>fix_perc</code>: % повышения цены для продажи</li>
-                <li><code>qty_aver</code>: коэффициенты увеличения объема (7 чисел через пробел)</li>
-                <li><code>step_aver</code>: шаги изменения цены для усреднений</li>
+                <li><code>qty_aver</code>: коэффициенты увеличения объема (7 чисел через пробел, например: 1.1 1.2 1.3 1.4 1.5 1.6 2)</li>
+                <li><code>step_aver</code>: шаги изменения цены для усреднений (7 чисел через пробел, например: 2.1 3.2 5 7 8 9 12)</li>
                 <li><code>limit_aver</code>: разрешенное количество усреднений (0-30)</li>
                 <li><code>min_order</code>: минимальный ордер в котируемой валюте</li>
                 <li><code>min_bal_perc</code>: минимальный % от депозита для выставления усредняющего ордера</li>
-                <li><code>timer_SL</code>: функция закрытия позы (stop loss) по времени</li>
+                <li><code>timer_SL</code>: функция закрытия позы (stop loss) по времени (если после № усреда прошло указанное кол-во минут, если до истечения таймера исполнился очередной усред- отсчет таймера начинается заново)</li>
                 <li><code>delta_start</code>: % изменения цены для входа (выбрать delta_start1 или delta_start2)</li>
-                <li><code>delta_start_limit</code>: ограничение дельты для реж СТАНДАРТНЫЙ</li>
-                <li><code>delta_vol_start</code>: % увеличения объема торгов</li>
+                <li><code>delta_start1</code>: для LONG на сколько % должен подняться курс от цены открытия выбранной свечи до текущей для старта (для SHORT пишем со знаком минус, на сколько % должен упасть курс от цены открытия свечи до текущей)</li>
+                <li><code>delta_start2</code>: для LONG пишем со знаком минус, на сколько % должен упасть курс от цены открытия выбранной свечи до текущей для старта (для SHORT на сколько % должен подняться курс от цены открытия свечи до текущей)</li>
+                <li><code>delta_start_limit</code>: ограничение дельты для реж СТАНДАРТНЫЙ от delta_start1 до delta_start1+delta_start_limit (от delta_start2-delta_start_limit до delta_start2), чтобы бот не взял слишком выросшую/упавшую пару (т.е. при delta_start1=5% и delta_start_limit=50%, бот возьмет пару с дельтой от 5% до 55%)</li>
+                <li><code>delta_vol_start</code>: % увеличения объема торгов последней закрытой свечи по сравнению с объемом выбранной дальней свечи</li>
                 <li><code>kline_interval</code>: интервал свечей для анализа</li>
-                <li><code>interval_limit</code>: количество анализируемых свечей</li>
-                <li><code>control_auto</code>: режим удержания пары в позиции</li>
+                <li><code>interval_limit</code>: количество анализируемых свечей для выбора цены открытия самой дальней свечи (если следим за изменением цены за последние 3 минуты, то можно выбрать kline_interval 1m и interval_limit 3</li>
+                <li><code>control_auto</code>: режим удержания подходящей по стандартным параметрам пары всегда в позиции до достижения условий по изменению цены или времени</li>
                 <li><code>delta_stop</code>: % изменения цены для возврата в поиск</li>
                 <li><code>time_stop_ca</code>: время удержания пары (минуты)</li>
-                <li><code>super_asset</code>: режим торговли без условий</li>
+                <li><code>super_asset</code>: режим торговли без условий  до отключения или истечения таймера time_stop_sa, при этом пары из white_list не будут работать (в терминале вводится командой -super_asset_add в формате ETHUSDT)</li>
                 <li><code>time_stop_sa</code>: время удержания в SUPER_ASSET (минуты)</li>
                 <li><code>after_sa_qpr</code>: переход после SUPER_ASSET в Quick_Price_Check</li>
-                <li><code>most_changed</code>: режим выбора в коридоре изменения цены</li>
+                <li><code>most_changed</code>: режим выбора в коридоре изменения цены  за последние 24ч</li>
                 <li><code>delta24_min</code>: min изменение цены за 24ч</li>
                 <li><code>delta24_max</code>: max изменение цены за 24ч</li>
                 <li><code>select_delta24</code>: выбор ближе к max/min</li>
-                <li><code>delta_vol_most_ch</code>: выбор по объему последних свечей</li>
-                <li><code>delta_vol_mc_interval</code>: период свечей</li>
-                <li><code>Quick_Price_Check</code>: режим выбор по изменению цены</li>
-                <li><code>delta_quick</code>: коридор изменения цены</li>
-                <li><code>kline_interval_quick</code>: интервал свечи</li>
-                <li><code>Quick_My_Kline</code>: режим выбора в произвольном периоде</li>
-                <li><code>my_kline_interval</code>: длительность свечи (секунды)</li>
-                <li><code>my_kline_delta</code>: коридор изменения цены</li>
-                <li><code>Quick_Only_White</code>: проверять только пары из W_list</li>
+                <li><code>delta_vol_most_ch</code>: выбор по объему последних свечей вместо select_delta24</li>
+                <li><code>delta_vol_mc_interval</code>: период свечей для использования в delta_vol_most_ch</li>
+                <li><code>Quick_Price_Check</code>: режим выбор по изменению цены от старта последней свечи до текущей цены</li>
+                <li><code>delta_quick</code>: коридор изменения цены в формате 2 числа через пробел, первое должно быть меньше второго (например: 5 15)</li>
+                <li><code>kline_interval_quick</code>: интервал свечи для режима Quick_Price_Check</li>
+                <li><code>Quick_My_Kline</code>: режим выбора пары по изм.цены в произвольном периоде (свече, с выбранной в секундах длительностью)</li>
+                <li><code>my_kline_interval</code>: динтервал (длительность) произвольной свечи в секундах от 5</li>
+                <li><code>my_kline_delta</code>: коридор изменения цены от старта произвольной свечи до текущей цены (в %) в формате 2 числа через пробел, первое должно быть меньше второго (например: 1 7, для SHORT автозазеркалится: -7 -1)</li>
+                <li><code>Quick_Only_White</code>: проверять только пары из W_list для режима Quick_My_Kline</li>
                 <li><code>stop_loss</code>: % падения цены для закрытия в минус</li>
                 <li><code>use_stop_loss</code>: включение stop_loss (да/нет)</li>
                 <li><code>pause_after_stop_loss</code>: пауза после срабатывания stop_loss</li>
                 <li><code>send_aver_message</code>: отправка сообщений об ордерах</li>
-                <li><code>check_last_pair</code>: проверка пары после закрытия</li>
-                <li><code>completed</code>: пауза после сделки (1/0)</li>
+                <li><code>check_last_pair</code>: проверка пары после закрытия позиции на соответствие условиям для входа и продолжения работы с ней, или сразу возвратиться в перебор пар</li>
+                <li><code>completed</code>: пауза после сделки (1-вкл/0-выкл)</li>
                 <li><code>direction</code>: LONG или SHORT</li>
-                <li><code>profit_in</code>: накопление прибыли (base/quote)</li>
-                <li><code>manual_aver</code>: команда ручного усреднения</li>
+                <li><code>profit_in</code>: при работе в SHORT можно выбрать частичное накопление прибыли в базовой валюте (по умолчанию только в котируемой), base/quote</li>
+                <li><code>manual_aver</code>: команда для ручного усреднения по рынку, не дожидаясь цены лимитного усред-ордера, но не сработает, если усред-ордер, выставленный ботом, исполнен частично ('PARTIALLY_FILLED')</li>
                 <li><code>fix_loss</code>: команда закрытия позиции</li>
                 <li><code>clear</code>: сброс данных об ордерах</li>
                 <li><code>clear_profit</code>: сброс данных о прибыли</li>
@@ -1482,11 +1634,11 @@
                 <li><code>white_list</code>: список пар для работы</li>
                 <li><code>api_key</code>: API ключ с разрешением на спотовую торговлю</li>
                 <li><code>api_secret</code>: секретный API ключ</li>
-                <li><code>botID</code>: ID Telegram бота</li>
-                <li><code>channelID</code>: ID Telegram канала</li>
-                <li><code>tguserid</code>: ID пользователя Telegram</li>
+                <li><code>botID</code>: api телеграм бота полученный от @BotFather (пример: 5656544920:AAHrXhjhujhfdf7RPJlheqJXEulBW)</li>
+                <li><code>channelID</code>: ID канала telegram бота для уведомлений, полученное от @userinfobot (пример: -1001656543985)</li>
+                <li><code>tguserid</code>: ID основного user-a телеграм, полученное от @userinfobot (пример: 346549043)</li>
                 <li><code>licens_key</code>: лицензионный ключ</li>
-                <li><code>quoteVolume24hr</code>: минимальный 24-часовой объем торгов</li>
+                <li><code>quoteVolume24hr</code>: минимальный 24-часовой объем торгов в котируемой валюте</li>
             </ul>
         </div>
         
@@ -1507,7 +1659,9 @@
         <h2>Условия использования</h2>
         <ul>
             <li>Первые 2 недели работы бота бесплатные (по запросу в Telegram)</li>
+<!--
             <li>Пробный период до 15 января 2024 г.</li>
+-->
             <li>Для увеличения времени работы до 1/6/12 месяцев: напишите в Telegram</li>
             <li>На тестовой бирже срок работы 2 недели после запуска</li>
         </ul>
@@ -1523,7 +1677,7 @@
         </div>
         
         <div class="warning">
-            <p>E-BotSpot поставляется по принципу «как есть». Никаких гарантий не прилагается. Торговля на криптобиржах сопряжена с высоким риском.</p>
+            <p>E-BotSpot поставляется по принципу «как есть». Никаких гарантий не прилагается. Вы берете на себя весь риск относительно использования этого бота и должны понимать, что торговля на криптобиржах сопряжена с повышенным риском, и подходить к управлению рисками со всей ответственностью.</p>
         </div>
     </div>
 
@@ -1548,21 +1702,21 @@
         <div class="subsection">
             <h3>Инструкция по установке</h3>
             <ol>
-                <li>На VPS Ubuntu 20 создайте папку: 
+                <li>На VPS Ubuntu 20 создайте папку (например: BinSpot): 
                     <div class="code-block">mkdir BinSpot</div>
                 </li>
                 <li>Перейдите в папку:
                     <div class="code-block">cd BinSpot</div>
                 </li>
-                <li>Перенесите файл бота</li>
+                <li>Перенесите в эту папку файл бота (E-BotSpot-5)</li>
                 <li>Откройте screen-сессию:
                     <div class="code-block">screen -S BinSpot</div>
                 </li>
                 <li>Дайте права на запуск:
-                    <div class="code-block">chmod 755 E-BotSpot-3</div>
+                    <div class="code-block">chmod 755 E-BotSpot-5</div>
                 </li>
                 <li>Запустите бота:
-                    <div class="code-block">./E-BotSpot-3</div>
+                    <div class="code-block">./E-BotSpot-5</div>
                 </li>
                 <li>Введите параметры: API-ключи и настройки</li>
                 <li>Для остановки: <kbd>Ctrl+C</kbd></li>
@@ -1593,7 +1747,7 @@
         
         <div class="subsection">
             <h3>Дополнительные материалы</h3>
-            <p>Табличка BinSpot_averaged.xls: 
+            <p>Для приблизительных расчётов усреднений- табличка BinSpot_averaged.xls: 
                 <a href="https://github.com/ebot732/BinSpot/raw/main/table/BinSpot-18_averaged.xls/">https://github.com/ebot732/BinSpot/raw/main/table/BinSpot-18_averaged.xls/</a>
             </p>
         </div>
@@ -1667,6 +1821,7 @@
                 </div>
                 </div>
     
+<!--
 <!DOCTYPE html>
 <html lang="ru">
 <head>
@@ -1791,6 +1946,7 @@
         }
     </style>
 </head>
+-->
 <body>
     <h1>H-BotFutur - Бот для хеджирования на фьючерсах Binance и Bybit</h1>
 
@@ -1799,16 +1955,16 @@
         <p>H-BotFutur - бот для торговли на фьючерсах Binance и Bybit в режиме хеджирования (двустороннем режиме позиций- Hedge Mode), с использованием стратегии Мартингейла (усреднения- увеличения позиции с целью улучшения средней цены входа).</p>
         
         <div class="subsection">
-            <h3>Режимы работы</h3>
+            <h3>Направления работы</h3>
             <p>Возможные направления работы: <span class="param">LONG</span>/<span class="param">SHORT</span>/<span class="param">AUTO</span>.</p>
             
             <div class="subsection">
-                <h4>Режим AUTO</h4>
+                <h4>AUTO</h4>
                 <p>При AUTO бот откроет сразу и LONG и SHORT позиции по выбранной паре, выставит усредняющие ордера по этим позициям и затем будет работать в направлении исполнившегося усред-ордера, а противоположная позиция останется в качестве страхующей и усред-ордер по ней будет отменен.</p>
             </div>
             
             <div class="subsection">
-                <h4>Режим LONG/SHORT</h4>
+                <h4>LONG/SHORT</h4>
                 <p>При установке направления <span class="param">LONG</span>/<span class="param">SHORT</span> бот откроет рабочую позицию только в одном направлении (как E-BotFutures), но можно дополнительно указать- открывать страхующую (противоположную) позицию (по умолчанию установится в <span class="param">off</span>), при этом, с <span class="param">insurance_pose</span> - <span class="param">on</span>, если FIX-ордер исполнится без усреднений, то прибыли не будет (+прибыль-убыток=0).</p>
             </div>
         </div>
@@ -1912,8 +2068,8 @@
     </div>
 
     <div class="section">
-        <h2>Алгоритм работы</h2>
-        <p>После выбора монеты в одном из режимов бот:</p>
+        <h2>Алгоритм работы на примере LONG</h2>
+        <p>После выбора монеты в одном из режимов (кроме режима OCO_Quick) бот:</p>
         <ul>
             <li>Покупает ее маркет-ордером на указанный объем</li>
             <li>Выставляет купленные монеты на продажу лимитным sell-ордером по курсу на указанный процент прибыли выше курса покупки</li>
@@ -1934,13 +2090,9 @@
         
         <ul>
             <li>Остановка бота командой: <kbd>ctrl+c</kbd> (важно!: не останавливайте бот в момент совершения сделок, возможна ошибка записи в базу данных бота)</li>
-            <li>В <span class="param">white_list</span> (список пар для работы) можно внести от 1 до нескольких сотен пар, главное, чтобы котируемая валюта была одна: если торгуете к USDT, то пары ETHUSDT, BTCUSDT, XRPUSDT и т.д., если торгуете к BTC, то пары ETHBTC, XRPBTC, DASHBTC и т.д., если к BUSD, то пары с BUSD и т.д.</li>
-            <li>При изменении котируемой валюты (с USDT на BTC и т.д.) не забывайте менять и <span class="param">min_order</span> в настройках бота (в USDT min_order должен быть больше 6, а в BTC больше 0.001)</li>
-            <li>При работе с парами к USDT активы должны находится на спотовом балансе USDT, если работаете с парами к BTC, активы должны находится на спотовом балансе BTC</li>
+            <li>В <span class="param">white_list</span> (список пар для работы) можно внести от 1 до нескольких сотен пар, главное, чтобы котируемая валюта была USDT</li>
             <li>Для прокрутки экрана терминала вверх в SCREEN есть команда: <kbd>ctrl+a</kbd>, <kbd>esc</kbd> и далее стрелка вверх. Для выхода из этого режима: <kbd>esc</kbd>, <kbd>esc</kbd></li>
         </ul>
-        
-        <p>Для работы H-BotFutur на Binance необходимо использовать BNB для оплаты комиссий биржи (нужно поставить соответствующую галочку в лк binance) и следить за наличием BNB на спот аккаунте.</p>
         
         <p>После закрытия каждой сделки H-BotFutur:</p>
         <ul>
@@ -1953,86 +2105,154 @@
     <div class="section">
         <h2>Настройки бота</h2>
         <div class="info-box">
+<!--
             <div class="setting-title">Основные настройки</div>
-            <ul>
-                <li><span class="param">fix_perc</span>: процент повышения цены для продажи при LONG или падения для покупки при SHORT</li>
-                <li><span class="param">trailing_FIX</span>: возможность выставления TrailingStop ордера для FIX (on/off)</li>
-                <li><span class="param">trailingPricePercent</span>: процент разворота цены для срабатывания TrailingStop ордера для FIX</li>
-                <li><span class="param">step_aver-SHORT</span>: ввод step_aver1, step_aver2, ... step_aver7 шагов изменения цены для выставления усредов для SHORT</li>
-                <li><span class="param">qty_aver-SHORT</span>: ввод qty_aver1, qty_aver2, ... qty_aver7 для кратного увеличения объема выставляемого усред ордера для SHORT</li>
-                <li><span class="param">step_aver-LONG</span>: ввод step_aver1, step_aver2, ... step_aver7 шагов изменения цены для выставления усредов для LONG</li>
-                <li><span class="param">qty_aver-LONG</span>: ввод qty_aver1, qty_aver2, ... qty_aver7 для кратного увеличения объема выставляемого усред ордера для LONG</li>
-                <li><span class="param">limit_aver</span>: разрешенное количество усреднений</li>
-                <li><span class="param">min_order</span>: минимальная покупка (продажа) в котируемой валюте (например, в паре ETH/USDT это USDT, ставить больше 11 и учитывайте, что в зависимости от выбранного leverage (кредитного плеча) будет использоваться меньше USDT, например: если min_order указан 20, а leverage указан 10, то для ордера будет использовано 20/10=2 USDT)</li>
-                <li><span class="param">timer_SL</span>: функция закрытия позы (stop loss), если после № усреда прошло указанное кол-во минут (если до истечения таймера исполнился очередной усред- отсчет таймера начинается заново)</li>
-                <li><span class="param">delta_start</span>: процент изменения цены для входа в сделку, нужно выбрать delta_start1 или delta_start2:</li>
-                <li><span class="param">delta_start1</span>: на сколько % должен подняться курс от цены открытия выбранной дальней свечи до текущей цены для старта</li>
-                <li><span class="param">delta_start2</span>: на сколько % должен упасть курс от цены открытия выбранной дальней свечи до текущей цены для старта</li>
-                <li><span class="param">delta_start_limit</span>: ограничение дельты для реж СТАНДАРТНЫЙ от delta_start1 до delta_start1+delta_start_limit (от delta_start2-delta_start_limit до delta_start2), чтобы бот не взял слишком выросшую/упавшую пару (т.е. при delta_start1=5% и delta_start_limit=50%, бот возьмет пару с дельтой от 5% до 55%)</li>
-                <li><span class="param">delta_vol_start</span>- на сколько % должен измениться объем торгов:
-                    <ul>
-                        <li>При interval_limit 1 бот будет получать изменение объема всегда 0</li>
-                        <li>При interval_limit 2 (выборе 2-х свечей для анализа) бот будет сравнивать объемы текущей (еще не закрытой) и предыдущей (уже закрытой) свечей</li>
-                        <li>При interval_limit 3 и более бот сравнит объемы текущей (еще не закрытой) и предыдущей (уже закрытой) свечей, выберет больший объем и будет сравнивать с объемом выбранной (3-й или больше) дальней свечи</li>
-                    </ul>
-                </li>
-                <li><span class="param">kline_interval</span>: интервал свечей для анализа (1, 3, 5, 15, 30, 60, 120, 240, 360, 720 -в минутах, D -день, M -месяц, W -неделя)</li>
-                <li><span class="param">interval_limit</span>: какое количество свечей анализируем (если следим за изменением цены за последние 3 минуты, то можно выбрать kline_interval 1m и interval_limit 3)</li>
-            </ul>
-            
-            <div class="setting-title">Настройки режима CONTROL_AUTO</div>
-            <ul>
-                <li><span class="param">control_auto</span>: режим удержания выбранной по стандартным параметрам пары всегда в позиции до достижения условий по изменению цены или времени</li>
-                <li><span class="param">delta_stop</span>: процент изменения цены для возврата после закрытия позиции в перебор-поиск пары</li>
-                <li><span class="param">time_stop_ca</span>: время удержания пары всегда в позиции после старта из перебора-поиска пары в минутах</li>
-            </ul>
-            
-            <div class="setting-title">Настройки режима SUPER_ASSET</div>
-            <ul>
-                <li><span class="param">super_asset</span>: пара для бесконечной торговли независимо от delta_start, при этом пары из white_list не будут работать (вводится командой <span class="example">-super_asset_add</span> в формате ETHUSDT)</li>
-                <li><span class="param">time_stop_sa</span>: время удержания пары в SUPER_ASSET, после которого при закрытии позиции бот вернется в режим СТАНДАРТНЫЙ или MOST_CHANGED, в минутах</li>
-                <li><span class="param">after_sa_mch</span>: выбор перехода после истечения таймера SUPER_ASSET в режим MOST_CHANGED или в СТАНДАРТНЫЙ</li>
-                <li><span class="param">after_sa_qpr</span>: переход после истечения таймера SUPER_ASSET в режим Quick_Price_Check</li>
-            </ul>
-            
-            <!-- Продолжение всех настроек в аналогичном формате -->
-            <div class="setting-title">Дополнительные настройки</div>
-            <ul>
-                <li><span class="param">send_aver_message</span>: включение/выключение отправки сообщений в телеграм канал о каждом выставленном/исполненном ордере</li>
-                <li><span class="param">check_last_pair</span>: проверять пару после закрытия позиции на соответствие условиям для входа и продолжения работы с ней, или сразу возвратиться в перебор пар</li>
-                <li><span class="param">completed</span>: поставить бота на паузу при закрытии очередной сделки (1-вкл/0-выкл)</li>
-                <li><span class="param">manual_aver</span>: команда для ручного усреднения по рынку, не дожидаясь цены лимитного усред-ордера, но не сработает, если усред-ордер, выставленный ботом, исполнен частично (PARTIALLY_FILLED)</li>
-                <li><span class="param">fix_loss</span>: команда для закрытия открытой позиции по рынку</li>
-                <li><span class="param">clear</span>: сброс из базы данных сведений об открытых ботом ордерах</li>
-                <li><span class="param">leverage</span>: размер кредитного плеча от 1 до 100 (оно разное для разных пар, смотрите в лк биржи)</li>
-                <li><span class="param">marginType</span>: тип маржи-tradeMode (cross margin | isolated margin)</li>
-                <li><span class="param">directionOnly</span>: LONG, SHORT или AUTO (при AUTO бот будет работать в направлении первого исполнившегося усредняющего ордера. Изменение применится при старте новой позиции)</li>
-                <li><span class="param">insurance_pose</span>: on или off (открывать страхующую позицию при заранее выбранном направлении работы LONG/SHORT)</li>
-                <li><span class="param">clos_insurpos_at_aver</span>: в AUTO закрыть страхующую позу в плюс при исполнении очередного усреда (ввести № усреда или off)</li>
-                <li><span class="param">clos_insurpos_if_revers</span>: в AUTO закрыть страхующую позу в плюс при определении разворота цены, ввести:
-                    <ul>
-                        <li><span class="param">off</span></li>
-                        <li>или в формате <span class="example">2.1% aver 2</span> (первое число-откат цены в %, следующее № усреда, после исполнения которого бот начнет отслеживание разворота цены)</li>
-                        <li>или в формате <span class="example">2.1% bef_aver 2 if 3.1%</span> (первое число-откат цены в %, следующее № усреда, до цены исполнения которого за последнее число % бот начнет отслеживание разворота цены)</li>
-                    </ul>
-                </li>
-                <li><span class="param">clear_profit</span>: сброс из базы данных сведений о прибыли</li>
-                <li><span class="param">t_sleep</span>: при получении от биржи ошибки о превышении лимита api-запросов, можно выбрать значение паузы в секундах (например: 1, 3, 5, 7)</li>
-                <li><span class="param">t_sleep_perebor</span>: пауза перед повтором перебора монет для выбора подходящей для старта (по умолчанию 40 сек)</li>
-                <li><span class="param">white_list</span>: список пар, которые бот будет использовать для анализа и выбора подходящей для открытия сделки</li>
-                <li><span class="param">api_key</span>: открытый api-ключ от биржи с разрешением на фьючерсную торговлю</li>
-                <li><span class="param">api_secret</span>: секретный api-ключ от биржи</li>
-                <li><span class="param">botID</span>: api телеграм бота полученный от @BotFather (пример: <span class="example">5656544920:AAHrXhjhujhfdf7RPJlheqJXEulBW</span>)</li>
-                <li><span class="param">channelID</span>: ID канала telegram бота для уведомлений, полученное от @userinfobot (пример: <span class="example">-1001656543985</span>)</li>
-                <li><span class="param">tguserid</span>: ID основного user-a телеграм, полученное от @userinfobot (пример: <span class="example">346549043</span>)</li>
-                <li><span class="param">use_testnet</span>- включить использование бота в testnet (только для Binance и Bybit)</li>
-                <li><span class="param">licens_key</span>: лицензионный ключ для продления периода работы бота, полученный от разработчика</li>
-                <li><span class="param">quoteVolume24hr</span>: минимальный 24-х часовой оборот торгов в котируемой валюте (в паре ETH/USDT это USDT, в паре ETH/BTC это BTC), чтобы бот взял пару из white_list в работу</li>
-                <li><span class="param">max_fund_rate</span>: максимальная ставка комиссии за финансирование при выборе пары</li>
-                <li><span class="param">del_pair_after_check_funding</span>: удалять или нет пару из white_list, если ставка комиссии выше, чем max_fund_rate</li>
-                <li><span class="param">if_long_short_fund_can</span>: брать пару в работу независимо от max_fund_rate, если комиссия за фандинг будет мне в плюс и directionOnly не AUTO (например, если directionOnly LONG и фандинг отрицательный или directionOnly SHORT и фандинг положительный)</li>
-                <li><span class="param">small_id</span>: ограничить количество знаков при выводе id ордера в терминале (1-50)</li>
-            </ul>
+-->
+<ul>
+    <div class="setting-title">Основные настройки</div>
+    <li><span class="param">fix_perc</span>: процент повышения цены для продажи при LONG или падения для покупки при SHORT</li>
+    <li><span class="param">trailing_FIX</span>: возможность выставления TrailingStop ордера для FIX (on/off)</li>
+    <li><span class="param">trailingPricePercent</span>: процент разворота цены для срабатывания TrailingStop ордера для FIX</li>
+    <li><span class="param">step_aver-SHORT</span>: ввод step_aver1, step_aver2, ... step_aver7 шагов изменения цены для выставления усредов для SHORT</li>
+    <li><span class="param">qty_aver-SHORT</span>: ввод qty_aver1, qty_aver2, ... qty_aver7 для кратного увеличения объема выставляемого усред ордера для SHORT</li>
+    <li><span class="param">step_aver-LONG</span>: ввод step_aver1, step_aver2, ... step_aver7 шагов изменения цены для выставления усредов для LONG</li>
+    <li><span class="param">qty_aver-LONG</span>: ввод qty_aver1, qty_aver2, ... qty_aver7 для кратного увеличения объема выставляемого усред ордера для LONG</li>
+    <li><span class="param">limit_aver</span>: разрешенное количество усреднений</li>
+    <li><span class="param">min_order</span>: минимальная покупка (продажа) в котируемой валюте (например, в паре ETH/USDT это USDT, ставить больше 11 и учитывайте, что в зависимости от выбранного leverage (кредитного плеча) будет использоваться меньше USDT, например: если min_order указан 20, а leverage указан 10, то для ордера будет использовано 20/10=2 USDT)</li>
+    <li><span class="param">timer_SL</span>: функция закрытия позы (stop loss), если после № усреда прошло указанное кол-во минут (если до истечения таймера исполнился очередной усред- отсчет таймера начинается заново)</li>
+    <li><span class="param">delta_start</span>: процент изменения цены для входа в сделку, нужно выбрать delta_start1 или delta_start2:
+        <ul>
+            <li><span class="param">delta_start1</span>: на сколько % должен подняться курс от цены открытия выбранной дальней свечи до текущей цены для старта</li>
+            <li><span class="param">delta_start2</span>: на сколько % должен упасть курс от цены открытия выбранной дальней свечи до текущей цены для старта</li>
+        </ul>
+    </li>
+    <li><span class="param">delta_start_limit</span>: ограничение дельты для реж СТАНДАРТНЫЙ от delta_start1 до delta_start1+delta_start_limit (от delta_start2-delta_start_limit до delta_start2), чтобы бот не взял слишком выросшую/упавшую пару (т.е. при delta_start1=5% и delta_start_limit=50%, бот возьмет пару с дельтой от 5% до 55%)</li>
+    <li><span class="param">delta_vol_start</span>: на сколько % должен измениться объем торгов:
+        <ul>
+            <li>При interval_limit 1 бот будет получать изменение объема всегда 0</li>
+            <li>При interval_limit 2 (выборе 2-х свечей для анализа) бот будет сравнивать объемы текущей (еще не закрытой) и предыдущей (уже закрытой) свечей</li>
+            <li>При interval_limit 3 и более бот сравнит объемы текущей (еще не закрытой) и предыдущей (уже закрытой) свечей, выберет больший объем и будет сравнивать с объемом выбранной (3-й или больше) дальней свечи</li>
+        </ul>
+    </li>
+    <li><span class="param">kline_interval</span>: интервал свечей для анализа (1, 3, 5, 15, 30, 60, 120, 240, 360, 720 -в минутах, D -день, M -месяц, W -неделя)</li>
+    <li><span class="param">interval_limit</span>: какое количество свечей анализируем (если следим за изменением цены за последние 3 минуты, то можно выбрать kline_interval 1m и interval_limit 3)</li>
+
+    <li><span class="param">send_aver_message</span>: включение/выключение отправки сообщений в телеграм канал о каждом выставленном/исполненном ордере</li>
+    <li><span class="param">check_last_pair</span>: проверять пару после закрытия позиции на соответствие условиям для входа и продолжения работы с ней, или сразу возвратиться в перебор пар</li>
+    <li><span class="param">completed</span>: поставить бота на паузу при закрытии очередной сделки (1-вкл/0-выкл)</li>
+    <li><span class="param">manual_aver</span>: команда для ручного усреднения по рынку, не дожидаясь цены лимитного усред-ордера, но не сработает, если усред-ордер, выставленный ботом, исполнен частично (PARTIALLY_FILLED)</li>
+    <li><span class="param">fix_loss</span>: команда для закрытия открытой позиции по рынку</li>
+    <li><span class="param">clear</span>: сброс из базы данных сведений об открытых ботом ордерах</li>
+    <li><span class="param">leverage</span>: размер кредитного плеча от 1 до 100 (оно разное для разных пар, смотрите в лк биржи)</li>
+    <li><span class="param">marginType</span>: тип маржи-tradeMode (cross margin | isolated margin)</li>
+    <li><span class="param">directionOnly</span>: LONG, SHORT или AUTO (при AUTO бот будет работать в направлении первого исполнившегося усредняющего ордера. Изменение применится при старте новой позиции)</li>
+    <li><span class="param">insurance_pose</span>: on или off (открывать страхующую позицию при заранее выбранном направлении работы LONG/SHORT)</li>
+    <li><span class="param">clos_insurpos_at_aver</span>: в AUTO закрыть страхующую позу в плюс при исполнении очередного усреда (ввести № усреда или off)</li>
+    <li><span class="param">clos_insurpos_if_revers</span>: в AUTO закрыть страхующую позу в плюс при определении разворота цены, ввести:
+        <ul>
+            <li>off</li>
+            <li>или в формате 2.1% aver 2 (первое число-откат цены в %, следующее № усреда, после исполнения которого бот начнет отслеживание разворота цены)</li>
+            <li>или в формате 2.1% bef_aver 2 if 3.1% (первое число-откат цены в %, следующее № усреда, до цены исполнения которого за последнее число % бот начнет отслеживание разворота цены)</li>
+        </ul>
+    </li>
+    <li><span class="param">clear_profit</span>: сброс из базы данных сведений о прибыли</li>
+    <li><span class="param">t_sleep</span>: при получении от биржи ошибки о превышении лимита api-запросов, можно выбрать значение паузы в секундах (например: 1, 3, 5, 7)</li>
+    <li><span class="param">t_sleep_perebor</span>: пауза перед повтором перебора монет для выбора подходящей для старта (по умолчанию 40 сек)</li>
+    <li><span class="param">white_list</span>: список пар, которые бот будет использовать для анализа и выбора подходящей для открытия сделки</li>
+    <li><span class="param">api_key</span>: открытый api-ключ от биржи с разрешением на фьючерсную торговлю</li>
+    <li><span class="param">api_secret</span>: секретный api-ключ от биржи</li>
+    <li><span class="param">botID</span>: api телеграм бота полученный от @BotFather (пример: 5656544920:AAHrXhjhujhfdf7RPJlheqJXEulBW)</li>
+    <li><span class="param">channelID</span>: ID канала telegram бота для уведомлений, полученное от @userinfobot (пример: -1001656543985)</li>
+    <li><span class="param">tguserid</span>: ID основного user-a телеграм, полученное от @userinfobot (пример: 346549043)</li>
+    <li><span class="param">use_testnet</span>: включить использование бота в testnet (только для Binance и Bybit)</li>
+    <li><span class="param">licens_key</span>: лицензионный ключ для продления периода работы бота, полученный от разработчика</li>
+    <li><span class="param">quoteVolume24hr</span>: минимальный 24-х часовой оборот торгов в котируемой валюте (в паре ETH/USDT это USDT, в паре ETH/BTC это BTC), чтобы бот взял пару из white_list в работу</li>
+    <li><span class="param">max_fund_rate</span>: максимальная ставка комиссии за финансирование при выборе пары</li>
+    <li><span class="param">del_pair_after_check_funding</span>: удалять или нет пару из white_list, если ставка комиссии выше, чем max_fund_rate</li>
+    <li><span class="param">if_long_short_fund_can</span>: брать пару в работу независимо от max_fund_rate, если комиссия за фандинг будет мне в плюс и directionOnly не AUTO (например, если directionOnly LONG и фандинг отрицательный или directionOnly SHORT и фандинг положительный)</li>
+    <li><span class="param">small_id</span>: ограничить количество знаков при выводе id ордера в терминале (1-50)</li>
+    
+    <div class="setting-title">Настройки режима CONTROL_AUTO</div>
+    <li><span class="param">control_auto</span>: режим удержания выбранной по стандартным параметрам пары всегда в позиции до достижения условий по изменению цены или времени</li>
+    <li><span class="param">delta_stop</span>: процент изменения цены для возврата после закрытия позиции в перебор-поиск пары</li>
+    <li><span class="param">time_stop_ca</span>: время удержания пары всегда в позиции после старта из перебора-поиска пары в минутах</li>
+
+    <div class="setting-title">Настройки режима SUPER_ASSET</div>
+    <li><span class="param">super_asset</span>: пара для бесконечной торговли независимо от delta_start, при этом пары из white_list не будут работать (вводится командой -super_asset_add в формате ETHUSDT)</li>
+    <li><span class="param">time_stop_sa</span>: время удержания пары в SUPER_ASSET, после которого при закрытии позиции бот вернется в режим СТАНДАРТНЫЙ или MOST_CHANGED, в минутах</li>
+    <li><span class="param">after_sa_mch</span>: выбор перехода после истечения таймера SUPER_ASSET в режим MOST_CHANGED или в СТАНДАРТНЫЙ</li>
+    <li><span class="param">after_sa_qpr</span>: переход после истечения таймера SUPER_ASSET в режим Quick_Price_Check</li>
+
+    <div class="setting-title">Настройки режима MOST_CHANGED</div>
+    <li><span class="param">most_changed</span>: режим выбора в коридоре измен цены за последн 24ч</li>
+    <li><span class="param">delta24_min</span>: min изменение цены в коридоре для most_changed</li>
+    <li><span class="param">delta24_max</span>: max изменение цены в коридоре для most_changed</li>
+    <li><span class="param">select_delta24</span>: выбирать ближе к max или min для most_changed</li>
+    <li><span class="param">delta_vol_most_ch</span>: вместо select_delta24 смотреть объем последних (2-3) свечей в коридоре измен цены за последн 24ч и выбрать пару с большим изменением</li>
+    <li><span class="param">delta_vol_mc_interval</span>: период свечей для использования в delta_vol_most_ch</li>
+
+    <div class="setting-title">Настройки режима TV_SIGNALS</div>
+    <li><span class="param">tv_signals</span>: режим выбора пары по индикаторам из TradingView</li>
+    <li><span class="param">indicator_add (-indicator_del)</span>: ввод (удаление) индикаторов для поиска сигналов из TradingView</li>
+    <li><span class="param">TV_interval</span>: интервал свечей для сигналов из TradingView (1m 5m 15m 30m 1h 2h 4h 1d 1W 1M)</li>
+    <li><span class="param">direction_TV_sign</span>: направление поиска сигналов First_Sign/LONG/SHORT</li>
+    <li><span class="param">TV_delta24_min</span>: минимальный % изменения цены за 24ч для входа по TV_SIGNALS</li>
+    <li><span class="param">use_only_new_signals</span>: on/off -использовать только новые сигналы (первую проверку не учитывать)</li>
+
+    <div class="setting-title">Настройки режима DOUBLE_CHECK</div>
+    <li><span class="param">kline_interval_double</span>: период свечей для второй проверки в режиме DOUBLE_CHECK</li>
+    <li><span class="param">interval_limit_double</span>: количество свечей для второй проверки в режиме DOUBLE_CHECK</li>
+    <li><span class="param">double_check_LONG</span>: режим двойной проверки для работы в LONG</li>
+    <li><span class="param">delta24_double_LONG</span>: коридор изменения цены за 24 часа в % для LONG в формате 2 числа через пробел, первое должно быть меньше второго (например: -80 -15)</li>
+    <li><span class="param">delta_kline_double_LONG</span>: коридор изменения цены за выбранные последние свечи (от цены открытия выбранной дальней свечи до текущей цены) в % для LONG в формате 2 числа через пробел, первое должно быть меньше второго (например: 3 12)</li>
+    <li><span class="param">double_check_SHORT</span>: режим двойной проверки для работы в SHORT</li>
+    <li><span class="param">delta24_double_SHORT</span>: коридор изменения цены за 24 часа в % для SHORT в формате 2 числа через пробел, первое должно быть меньше второго (например: 15 80)</li>
+    <li><span class="param">delta_kline_double_SHORT</span>: коридор изменения цены за выбранные последние свечи (от цены открытия выбранной дальней свечи до текущей цены) в % для SHORT в формате 2 числа через пробел, первое должно быть меньше второго (например: -12 -3)</li>
+
+    <div class="setting-title">Настройки режима Quick_Price_Check</div>
+    <li><span class="param">Quick_Price_Check</span>: режим выбор пары по изменению цены от старта последней свечи до текущей цены</li>
+    <li><span class="param">delta_quick</span>: коридор изменения цены от старта последней свечи до текущей (в %) в формате 2 числа через пробел, первое должно быть меньше второго (например: 5 15)</li>
+    <li><span class="param">kline_interval_quick</span>: интервал свечи для режима Quick_Price_Check</li>
+    <li><span class="param">Quick_Only_White</span>: проверка только пар из W_list для режима Quick_Price_Check</li>
+    <li><span class="param">Quick_direction</span>: Выбрать для Quick_Price_Check направление SHORT/LONG/BOTH (при LONG зайдет в растущую, при SHORT- в падающую, при BOTH- в какую попадется первой в коридоре)</li>
+    <li><span class="param">Quick_LONG_start_Big</span>: при Quick_Price_Check LONG увеличим стартовый ордер в x раз (ввести в формате: "yes 2"/"no 2", где 2- это коэф. увеличения)</li>
+    <li><span class="param">use_preset_pairs_data</span>: использовать заранее записанные в БД пресеты по паре (start_qty, tick и т.д.) для режима Quick_Price_Check</li>
+
+    <div class="setting-title">Настройки режима Quick_My_Kline</div>
+    <li><span class="param">Quick_My_Kline</span>: режим выбора пары (по параметрам Quick_Price_Check, кроме delta_quick и kline_interval_quick) по изм.цены в произвольном периоде (свече, с выбранной в секундах длительностью)</li>
+    <li><span class="param">my_kline_interval</span>: интервал (длительность) произвольной свечи в секундах от 5</li>
+    <li><span class="param">my_kline_delta</span>: коридор изменения цены от старта произвольной свечи до текущей цены (в %) в формате 2 числа через пробел, первое должно быть меньше второго (например: 1 7, для SHORT автозазеркалится: -7 -1)</li>
+
+    <div class="setting-title">Настройки режима OCO_Quick</div>
+    <li><span class="param">OCO_Quick</span>: режим выбора пары (от 1 до 4) по параметрам Quick_Price_Check (кроме Quick_LONG_start_Big и use_preset_pairs_data) и выставления без усредов рыночных TakeProfit и StopLoss</li>
+    <li><span class="param">OCO_max_pos</span>: ограничение кол-ва позиций в OCO_Quick (до 4-х пар)</li>
+    <li><span class="param">OCO_time_stop</span>: в режиме OCO_Quick закрывать или нет позу по таймеру и время ожидания в минутах (ввести в формате: "yes 2"/"no 2", где 2- это таймер ожидания)</li>
+    <li><span class="param">OCO_take_loss</span>: вводится 2 числа- TakeProfit и StopLoss в % (например: 1 0.9)</li>
+
+    <div class="setting-title">Настройки режима Tg_Tracking</div>
+    <li><span class="param">Tg_Tracking</span>: режим слежения за сигналами из телеграм</li>
+    <li><span class="param">api_id</span>: API-ID, полученный на my.telegram.org/auth для Pyrogram</li>
+    <li><span class="param">api_hash</span>: API HASH, полученный на my.telegram.org/auth для Pyrogram</li>
+    <li><span class="param">phone</span>: номер телефона telegram для Pyrogram</li>
+    <li><span class="param">CHANNEL_ID</span>: id telegram channel для слежения за сигналами, получим переслав сообщение с сигналом боту: @userinfobot</li>
+    <li><span class="param">ChatType</span>: ChatType.CHANNEL или ChatType.BOT для Pyrogram</li>
+    <li><span class="param">sign_message_example</span>: образец сообщения о сигнале для Pyrogram (В ОДНУ СТРОКУ!!!), 
+        пример: "🔴 STPTUSDT Время: 2025-05-07 19:22:00 UTC Изменение: -5.37%",
+        после ввода образца будет выведено сообщение с элементами и их индексом (местом расположения), пример: 
+        all_index: 🔴 [0] STPTUSDT [1] Время: [2] 2025-05-07 [3] 19:22:00 [4] UTC [5] Изменение: [6] -5.37% [7]
+        которые нужно ввести в настройках в последующем</li>
+    <li><span class="param">sign_direction_LONG</span>: образец для LONG сигнала в sign_message_example, (например: 🟢)</li>
+    <li><span class="param">sign_direction_SHORT</span>: образец для SHORT сигнала в sign_message_example (например: 🔴)</li>
+    <li><span class="param">sign_dir_split_numb</span>: порядковый номер направления в сигнале (в примере 0)</li>
+    <li><span class="param">sign_pair_split_numb</span>: порядковый номер пары в сигнале (в примере 1)</li>
+    <li><span class="param">sign_procent_split_numb</span>: порядковый номер доп.инфо (например изменения цены) в сигнале (в примере 7)</li>
+    <li><span class="param">sign_check_quote_vol</span>: yes/no - после сигнала проверять объемы, чтобы было > quoteVolume24hr</li>
+    <li><span class="param">ignor_sign_direction</span>: игнорить LONG/SHORT сигнала и работать в AUTO (yes/no)</li>
+    <li><span class="param">sign_revers_direction</span>: yes/no - после сигнала открывать противоположную позицию (т.е. если сигнал LONG, то открываем SHORT, и наоборот)</li>
+    <li><span class="param">sign_only_from_white</span>: yes/no - после сигнала вход, только если пара есть в white_list (если используете на бирже, отличной от сигнала, обязательно sign_only_from_white = yes)</li>
+    <li><span class="param">Tg_LONG_start_Bigger</span>: при Tg_tracking LONG увеличить стартовый ордер в x раз (ввести в формате: "yes 2"/"no 2", где 2- это коэф. увеличения)</li>
+
+</ul>
         </div>
     </div>
 
