@@ -1584,6 +1584,7 @@
         <h2>Настройки бота</h2>
         <div class="info-box">
             <ul>
+                <div class="setting-title">Основные настройки</div>
                 <li><code>fix_perc</code>: % повышения цены для продажи</li>
                 <li><code>qty_aver</code>: коэффициенты увеличения объема (7 чисел через пробел, например: 1.1 1.2 1.3 1.4 1.5 1.6 2)</li>
                 <li><code>step_aver</code>: шаги изменения цены для усреднений (7 чисел через пробел, например: 2.1 3.2 5 7 8 9 12)</li>
@@ -1598,25 +1599,6 @@
                 <li><code>delta_vol_start</code>: % увеличения объема торгов последней закрытой свечи по сравнению с объемом выбранной дальней свечи</li>
                 <li><code>kline_interval</code>: интервал свечей для анализа</li>
                 <li><code>interval_limit</code>: количество анализируемых свечей для выбора цены открытия самой дальней свечи (если следим за изменением цены за последние 3 минуты, то можно выбрать kline_interval 1m и interval_limit 3</li>
-                <li><code>control_auto</code>: режим удержания подходящей по стандартным параметрам пары всегда в позиции до достижения условий по изменению цены или времени</li>
-                <li><code>delta_stop</code>: % изменения цены для возврата в поиск</li>
-                <li><code>time_stop_ca</code>: время удержания пары (минуты)</li>
-                <li><code>super_asset</code>: режим торговли без условий  до отключения или истечения таймера time_stop_sa, при этом пары из white_list не будут работать (в терминале вводится командой -super_asset_add в формате ETHUSDT)</li>
-                <li><code>time_stop_sa</code>: время удержания в SUPER_ASSET (минуты)</li>
-                <li><code>after_sa_qpr</code>: переход после SUPER_ASSET в Quick_Price_Check</li>
-                <li><code>most_changed</code>: режим выбора в коридоре изменения цены  за последние 24ч</li>
-                <li><code>delta24_min</code>: min изменение цены за 24ч</li>
-                <li><code>delta24_max</code>: max изменение цены за 24ч</li>
-                <li><code>select_delta24</code>: выбор ближе к max/min</li>
-                <li><code>delta_vol_most_ch</code>: выбор по объему последних свечей вместо select_delta24</li>
-                <li><code>delta_vol_mc_interval</code>: период свечей для использования в delta_vol_most_ch</li>
-                <li><code>Quick_Price_Check</code>: режим выбор по изменению цены от старта последней свечи до текущей цены</li>
-                <li><code>delta_quick</code>: коридор изменения цены в формате 2 числа через пробел, первое должно быть меньше второго (например: 5 15)</li>
-                <li><code>kline_interval_quick</code>: интервал свечи для режима Quick_Price_Check</li>
-                <li><code>Quick_My_Kline</code>: режим выбора пары по изм.цены в произвольном периоде (свече, с выбранной в секундах длительностью)</li>
-                <li><code>my_kline_interval</code>: динтервал (длительность) произвольной свечи в секундах от 5</li>
-                <li><code>my_kline_delta</code>: коридор изменения цены от старта произвольной свечи до текущей цены (в %) в формате 2 числа через пробел, первое должно быть меньше второго (например: 1 7, для SHORT автозазеркалится: -7 -1)</li>
-                <li><code>Quick_Only_White</code>: проверять только пары из W_list для режима Quick_My_Kline</li>
                 <li><code>stop_loss</code>: % падения цены для закрытия в минус</li>
                 <li><code>use_stop_loss</code>: включение stop_loss (да/нет)</li>
                 <li><code>pause_after_stop_loss</code>: пауза после срабатывания stop_loss</li>
@@ -1639,6 +1621,36 @@
                 <li><code>tguserid</code>: ID основного user-a телеграм, полученное от @userinfobot (пример: 346549043)</li>
                 <li><code>licens_key</code>: лицензионный ключ</li>
                 <li><code>quoteVolume24hr</code>: минимальный 24-часовой объем торгов в котируемой валюте</li>
+                
+                <div class="setting-title">Настройки режима CONTROL_AUTO</div>
+                <li><code>control_auto</code>: режим удержания подходящей по стандартным параметрам пары всегда в позиции до достижения условий по изменению цены или времени</li>
+                <li><code>delta_stop</code>: % изменения цены для возврата в поиск</li>
+                <li><code>time_stop_ca</code>: время удержания пары (минуты)</li>
+
+                <div class="setting-title">Настройки режима SUPER_ASSET</div>
+                <li><code>super_asset</code>: режим торговли без условий  до отключения или истечения таймера time_stop_sa, при этом пары из white_list не будут работать (в терминале вводится командой -super_asset_add в формате ETHUSDT)</li>
+                <li><code>time_stop_sa</code>: время удержания в SUPER_ASSET (минуты)</li>
+                <li><code>after_sa_qpr</code>: переход после SUPER_ASSET в Quick_Price_Check</li>
+
+                <div class="setting-title">Настройки режима MOST_CHANGED</div>
+                <li><code>most_changed</code>: режим выбора в коридоре изменения цены  за последние 24ч</li>
+                <li><code>delta24_min</code>: min изменение цены за 24ч</li>
+                <li><code>delta24_max</code>: max изменение цены за 24ч</li>
+                <li><code>select_delta24</code>: выбор ближе к max/min</li>
+                <li><code>delta_vol_most_ch</code>: выбор по объему последних свечей вместо select_delta24</li>
+                <li><code>delta_vol_mc_interval</code>: период свечей для использования в delta_vol_most_ch</li>
+
+                <div class="setting-title">Настройки режима Quick_Price_Check</div>
+                <li><code>Quick_Price_Check</code>: режим выбор по изменению цены от старта последней свечи до текущей цены</li>
+                <li><code>delta_quick</code>: коридор изменения цены в формате 2 числа через пробел, первое должно быть меньше второго (например: 5 15)</li>
+                <li><code>kline_interval_quick</code>: интервал свечи для режима Quick_Price_Check</li>
+
+                <div class="setting-title">Настройки режима Quick_My_Kline</div>
+                <li><code>Quick_My_Kline</code>: режим выбора пары по изм.цены в произвольном периоде (свече, с выбранной в секундах длительностью)</li>
+                <li><code>my_kline_interval</code>: динтервал (длительность) произвольной свечи в секундах от 5</li>
+                <li><code>my_kline_delta</code>: коридор изменения цены от старта произвольной свечи до текущей цены (в %) в формате 2 числа через пробел, первое должно быть меньше второго (например: 1 7, для SHORT автозазеркалится: -7 -1)</li>
+                <li><code>Quick_Only_White</code>: проверять только пары из W_list для режима Quick_My_Kline</li>
+
             </ul>
         </div>
         
@@ -1814,7 +1826,9 @@
                             <li>Стратегия Мартингейла</li>
                             <li>Поддержка LONG/SHORT/AUTO</li>
                             <li>Комплексная защита позиций</li>
+<!--
                             <li>Автоматическое управление рисками</li>
+-->
                         </ul>
                    <!-- <a href="#gallery" class="btn">Примеры работы</a> -->
                     </div>
@@ -2255,6 +2269,80 @@
 </ul>
         </div>
     </div>
+
+
+    <div class="section">
+        <h2>Условия использования</h2>
+        <ul>
+            <li>Первые 2 недели работы бота бесплатные (по запросу в Telegram)</li>
+<!--
+            <li>Пробный период до 15 января 2024 г.</li>
+-->
+            <li>Для увеличения времени работы до 1/6/12 месяцев: напишите в Telegram</li>
+            <li>На тестовой бирже срок работы 2 недели после запуска</li>
+        </ul>
+        
+        <div class="subsection">
+            <h3>Тестовые сети</h3>
+            <p>Для тестирования на фьючерсных тестовых биржах:</p>
+            <ul>
+                <li>Binance: <a href="https://testnet.binancefuture.com/ru/futures/">https://testnet.binancefuture.com/ru/futures/</a></li>
+                <li>Bybit: <a href="https://testnet.bybit.com/">https://testnet.bybit.com/</a></li>
+            </ul>
+            <p>Создайте тестовые API-ключи, пропишите их в настройках бота, установите <code>use_testnet: да</code></p>
+        </div>
+        
+        <div class="warning">
+            <p>H-BotFutur поставляется по принципу «как есть». Никаких гарантий не прилагается. Вы берете на себя весь риск относительно использования этого бота и должны понимать, что торговля на криптобиржах сопряжена с повышенным риском, и подходить к управлению рисками со всей ответственностью.</p>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Установка и запуск</h2>
+        
+        <div class="subsection">
+            <h3>Решение проблем с локализацией</h3>
+            <p>При ошибке: "UnicodeEncodeError: 'latin-1' codec can't encode characters..."</p>
+            <p><strong>Решение №1:</strong></p>
+            <div class="code-block">dpkg-reconfigure locales</div>
+            <p>Выберите все ru_RU.xx, консоль по умолчанию: en_US.UTF-8</p>
+            
+            <p><strong>Решение №2:</strong></p>
+            <div class="code-block">
+                sudo apt-get install language-pack-ru<br>
+                sudo update-locale LANG=ru_RU.UTF-8<br>
+                sudo apt-get install --reinstall locales
+            </div>
+        </div>
+        
+        <div class="subsection">
+            <h3>Инструкция по установке</h3>
+            <ol>
+                <li>На VPS Ubuntu 20/22 создайте папку (например: H-BotFutur): 
+                    <div class="code-block">mkdir H-BotFutur</div>
+                </li>
+                <li>Перейдите в папку:
+                    <div class="code-block">cd H-BotFutur</div>
+                </li>
+                <li>Перенесите в эту папку файл бота (H-BotFutur-9)</li>
+                <li>Откройте screen-сессию:
+                    <div class="code-block">screen -S H-BotFutur</div>
+                </li>
+                <li>Дайте права на запуск:
+                    <div class="code-block">chmod 755 H-BotFutur-9</div>
+                </li>
+                <li>Запустите бота:
+                    <div class="code-block">./H-BotFutur-9</div>
+                </li>
+                <li>Введите параметры: API-ключи и настройки</li>
+                <li>Для остановки: <kbd>Ctrl+C</kbd></li>
+                <li>Для выхода из screen: <kbd>Ctrl+A</kbd>, <kbd>D</kbd></li>
+                <li>Для подключения к работающему боту:
+                    <div class="code-block">screen -x H-BotFutur</div>
+                </li>
+            </ol>
+        </div>
+
 
     <div class="section">
         <h2>Настройка телеграм бота</h2>
