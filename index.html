@@ -812,7 +812,7 @@
     <!-- Герой секция -->
     <section class="hero">
         <div class="container">
-            <h1>Профессиональные торговые боты для Binance и Bybit</h1>
+            <h1>Торговые боты для Binance и Bybit</h1>
             <p>Автоматизируйте свою торговлю криптовалютой с помощью наших продвинутых решений для фьючерсов, спота и хеджирования</p>
             <p>E-BotFutures для фьючерсов USDT Perpetual в One Way</p>
             <p>E-BotSpot для торговли на спотовом рынке</p>
@@ -982,9 +982,9 @@
     </div>
 
     <div class="section">
-        <h2>Ограничение усреднений</h2>
+        <h2>Запрет усреднений</h2>
         <div class="info-box">
-            <p>Для ограничения использования усреднений нужно:</p>
+            <p>Для запрешения использования усреднений нужно:</p>
             <ul>
                 <li>Выставить <code>limit_aver</code> в 0</li>
                 <li>Или включить использование <code>stop_loss</code>, установить его срабатывание до усреднения - бот будет закрывать позицию в минус при неблагоприятном движении курса</li>
@@ -1050,7 +1050,7 @@
         </div>
         
         <div class="note">
-            <p>Режимы <code>super_asset</code>, <code>control_auto</code> и <code>most_changed</code> взаимоисключающие. При выборе одного режима другие отключаются. Если не выбран ни один из режимов, бот работает в стандартном режиме.</p>
+            <p>Режимы <code>SUPER_ASSET</code>, <code>CONTROL_AUTO</code> и <code>MOST_CHANGED</code> взаимоисключающие. При выборе одного режима другие отключаются. Если не выбран ни один из режимов, бот работает в стандартном режиме.</p>
         </div>
     </div>
 
@@ -1122,6 +1122,7 @@
         <h2>Настройки бота</h2>
         <div class="info-box">
             <ul>
+                <div class="setting-title">Основные настройки</div>
                 <li><code>fix_perc</code>: процент повышения цены для продажи (LONG) или падения (SHORT)</li>
                 <li><code>step_aver</code>: шаги изменения цены для усреднений (step_aver1, step_aver2, ... step_aver7)</li>
                 <li><code>qty_aver</code>: коэффициенты увеличения объема усредняющего ордера (7 чисел через пробел, например: 1.1 1.2 1.3 1.4 1.5 1.6 2)</li>
@@ -1132,15 +1133,6 @@
                 <li><code>delta_start1</code>: для LONG на сколько % должен подняться курс от цены открытия выбранной свечи до текущей для старта (для SHORT пишем со знаком минус, на сколько % должен упасть курс от цены открытия свечи до текущей)</li>
                 <li><code>delta_start2</code>: для LONG пишем со знаком минус, на сколько % должен упасть курс от цены открытия выбранной свечи до текущей для старта (для SHORT на сколько % должен подняться курс от цены открытия свечи до текущей)</li>
                 <li><code>delta_vol_start</code>: на сколько % должен увеличиться объем торгов последней свечи</li>
-                <li><code>control_auto</code>: режим удержания пары в позиции</li>
-                <li><code>delta_stop</code>: % изменения цены для возврата в поиск пары</li>
-                <li><code>time_stop_ca</code>: время удержания пары в позиции (минуты)</li>
-                <li><code>most_changed</code>: режим выбора в коридоре изменения цены</li>
-                <li><code>delta24_min</code>: min изменение цены за 24ч</li>
-                <li><code>delta24_max</code>: max изменение цены за 24ч</li>
-                <li><code>select_delta24</code>: выбор ближе к max/min значению</li>
-                <li><code>delta_vol_most_ch</code>: выбор по объему последних свечей</li>
-                <li><code>delta_vol_mc_interval</code>: период свечей для delta_vol_most_ch</li>
                 <li><code>stop_loss</code>: % изменения цены для закрытия в минус</li>
                 <li><code>use_stop_loss</code>: включение stop_loss (да/нет)</li>
                 <li><code>pause_after_stop_loss</code>: пауза после срабатывания stop_loss</li>
@@ -1149,8 +1141,6 @@
                 <li><code>completed</code>: пауза после сделки (1-вкл/0-выкл)</li>
                 <li><code>kline_interval</code>: интервал свечей (1m, 3m, 5m, 15m, 30m, 1h, 2h, 4h, 8h, 12h, 1d, 3d)</li>
                 <li><code>interval_limit</code>: количество анализируемых свечей</li>
-                <li><code>super_asset</code>: режим торговли без условий</li>
-                <li><code>time_stop_sa</code>: время удержания в SUPER_ASSET (минуты)</li>
                 <li><code>manual_aver</code>: команда ручного усреднения</li>
                 <li><code>fix_loss</code>: команда закрытия позиции по рынку</li>
                 <li><code>clear</code>: сброс данных об ордерах</li>
@@ -1168,6 +1158,23 @@
                 <li><code>tguserid</code>: ID пользователя Telegram (@userinfobot)</li>
                 <li><code>licens_key</code>: лицензионный ключ</li>
                 <li><code>quoteVolume24hr</code>: минимальный 24-часовой объем торгов</li>
+
+                <div class="setting-title">Настройки режима SUPER_ASSET</div>
+                <li><code>super_asset</code>: режим торговли без условий</li>
+                <li><code>time_stop_sa</code>: время удержания в SUPER_ASSET (минуты)</li>
+                
+                <div class="setting-title">Настройки режима CONTROL_AUTO</div>
+                <li><code>control_auto</code>: режим удержания пары в позиции</li>
+                <li><code>delta_stop</code>: % изменения цены для возврата в поиск пары</li>
+                <li><code>time_stop_ca</code>: время удержания пары в позиции (минуты)</li>
+
+                <div class="setting-title">Настройки режима MOST_CHANGED</div>
+                <li><code>most_changed</code>: режим выбора в коридоре изменения цены</li>
+                <li><code>delta24_min</code>: min изменение цены за 24ч</li>
+                <li><code>delta24_max</code>: max изменение цены за 24ч</li>
+                <li><code>select_delta24</code>: выбор ближе к max/min значению</li>
+                <li><code>delta_vol_most_ch</code>: выбор по объему последних свечей</li>
+                <li><code>delta_vol_mc_interval</code>: период свечей для delta_vol_most_ch</li>
             </ul>
         </div>
         
@@ -1424,7 +1431,6 @@
 
     <div class="section">
         <h2>Основная информация</h2>
-        <p>Bot for trading on the spot market of the Binance and Bybit exchanges.</p>
         <p>E-BotSpot объединил функции BinSpot, BybitSpot. Теперь в одном боте можно выбирать биржу и работать с ней.</p>
         
         <div class="subsection">
@@ -1518,7 +1524,7 @@
         </div>
         
         <div class="note">
-            <p>Режимы <code>SUPER_ASSET</code>, <code>CONTROL_AUTO</code>, <code>MOST_CHANGED</code>, <code>Quick_Price_Check</code> и <code>Quick_My_Kline</code> взаимоисключающие. При выборе одного режима другие отключаются.</p>
+            <p>Режимы <code>SUPER_ASSET</code>, <code>CONTROL_AUTO</code>, <code>MOST_CHANGED</code>, <code>Quick_Price_Check</code> и <code>Quick_My_Kline</code> взаимоисключающие. При выборе одного режима другие отключаются. Если не выбран ни один из режимов, бот будет работать в стандартном режиме.</p>
         </div>
     </div>
 
@@ -1657,7 +1663,7 @@
 
                 <div class="setting-title">Настройки режима Quick_My_Kline</div>
                 <li><code>Quick_My_Kline</code>: режим выбора пары по изм.цены в произвольном периоде (свече, с выбранной в секундах длительностью)</li>
-                <li><code>my_kline_interval</code>: динтервал (длительность) произвольной свечи в секундах от 5</li>
+                <li><code>my_kline_interval</code>: интервал (длительность) произвольной свечи в секундах от 5</li>
                 <li><code>my_kline_delta</code>: коридор изменения цены от старта произвольной свечи до текущей цены (в %) в формате 2 числа через пробел, первое должно быть меньше второго (например: 1 7, для SHORT автозазеркалится: -7 -1)</li>
                 <li><code>Quick_Only_White</code>: проверять только пары из W_list для режима Quick_My_Kline</li>
 
@@ -1832,7 +1838,7 @@
                         <h3>H-BotFutur</h3>
                         <p>Фьючерсы с хеджированием (Hedge Mode) на Binance и Bybit</p>
                         <ul class="features">
-                            <li>Торговля в режиме хеджирования</li>
+                            <li>Возможность торговли в режиме хеджирования</li>
                             <li>Стратегия Мартингейла</li>
                             <li>Поддержка LONG/SHORT/AUTO</li>
                             <li>Комплексная защита позиций</li>
@@ -2241,7 +2247,9 @@
     <li><span class="param">Quick_direction</span>: Выбрать для Quick_Price_Check направление SHORT/LONG/BOTH (при LONG зайдет в растущую, при SHORT- в падающую, при BOTH- в какую попадется первой в коридоре)</li>
     <li><span class="param">Quick_LONG_start_Big</span>: при Quick_Price_Check LONG увеличим стартовый ордер в x раз (ввести в формате: "yes 2"/"no 2", где 2- это коэф. увеличения)</li>
     <li><span class="param">use_preset_pairs_data</span>: использовать заранее записанные в БД пресеты по паре (start_qty, tick и т.д.) для режима Quick_Price_Check</li>
-
+    <li><span class="param">Black_List</span>: список пар, которые не будут доб. в пресеты для Quick_Price_Check (например с фиатом)</li>
+    <li><span class="param">clear_db_all_presets_pair</span>: удаление пресетов по всем парам (нужно при изменении leverage/marginType/tradeMode)</li>
+    
     <div class="setting-title">Настройки режима Quick_My_Kline</div>
     <li><span class="param">Quick_My_Kline</span>: режим выбора пары (по параметрам Quick_Price_Check, кроме delta_quick и kline_interval_quick) по изм.цены в произвольном периоде (свече, с выбранной в секундах длительностью)</li>
     <li><span class="param">my_kline_interval</span>: интервал (длительность) произвольной свечи в секундах от 5</li>
