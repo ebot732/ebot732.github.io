@@ -1031,7 +1031,7 @@ sudo apt-get install --reinstall locales<br></p>
 - Quick_direction, Выбрать для Quick_Price_Check направление SHORT/LONG/BOTH (при LONG зайдет в растущую, при SHORT- в падающую, при BOTH- в какую попадется первой в коридоре),<br>
 - Quick_LONG_start_Big, при Quick_Price_Check LONG увеличим стартовый ордер в x раз (ввести в формате: "yes 2"/"no 2", где 2- это коэф. увеличения),<br>
 - use_preset_pairs_data, использовать заранее записанные в БД пресеты по паре (start_qty, tick и т.д.) для режима Quick_Price_Check,<br>
-- Black_List, список пар, которые не будут доб. в пресеты для Quick_Price_Check (например с фиатом),<br>
+- Black_List, список пар, которые будут игнорироваться при Quick_Only_White=no для Quick_Price_Check (например с фиатом),<br>
 - clear_db_all_presets_pair, удаление пресетов по всем парам (нужно при изменении leverage/marginType/tradeMode),<br>
 
 <p></p>
