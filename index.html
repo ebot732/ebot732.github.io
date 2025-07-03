@@ -802,8 +802,7 @@
                <!-- <li><a href="#gallery">Галерея</a></li> -->
                     <li><a href="#benefits" class="btn">Преимущества</a></li>
                     <li><a href="#contact" class="btn">Контакты</a></li>
-                    <li><a href="index_OLD.html"  class="btn" title="Старая версия сайта">Старая версия сайта</a></li>
-                    
+                                        
                 </ul>
             </div>
         </div>
@@ -1978,7 +1977,7 @@
 </head>
 -->
 <body>
-    <h1>H-BotFutur - Бот для хеджирования на фьючерсах Binance и Bybit</h1>
+    <h1>H-BotFutur - Бот с возможностью хеджирования на фьючерсах Binance и Bybit</h1>
 
     <div class="section">
         <h2>Основная информация</h2>
@@ -2071,7 +2070,7 @@
         <div class="subsection">
             <div class="mode-title">7. Режим Quick_Price_Check</div>
             <p>Выбор пары по изменению цены от старта последней свечи до текущей цены.</p>
-            <p>В этом режиме бот запускает вебсокеты на все пары из <span class="param">white_list</span> по выбранному интералу последней свечи. Сравнивает цену открытия свечи и последней цены на момент получения данных и, если delta попадает в коридор из настроек, то берет пару в работу (учитывайте, что последняя свеча еще не закрытая, поэтому от цены старта свечи до текущей цены может быть от 1 секунды до самого интервала-таймфрейма свечи).</p>
+            <p>В этом режиме бот запускает вебсокеты на все пары из <span class="param">white_list</span> по выбранному интервалу последней свечи. Сравнивает цену открытия свечи и последней цены на момент получения данных и, если delta попадает в коридор из настроек, то берет пару в работу (учитывайте, что последняя свеча еще не закрытая, поэтому от цены старта свечи до текущей цены может быть от 1 секунды до самого интервала-таймфрейма свечи).</p>
         </div>
         
         <div class="subsection">
@@ -2244,10 +2243,10 @@
     <li><span class="param">delta_quick</span>: коридор изменения цены от старта последней свечи до текущей (в %) в формате 2 числа через пробел, первое должно быть меньше второго (например: 5 15)</li>
     <li><span class="param">kline_interval_quick</span>: интервал свечи для режима Quick_Price_Check</li>
     <li><span class="param">Quick_Only_White</span>: проверка только пар из W_list для режима Quick_Price_Check</li>
+    <li><span class="param">Black_List</span>: список пар, которые будут игнорироваться при Quick_Only_White=no для Quick_Price_Check (например с фиатом)</li>
     <li><span class="param">Quick_direction</span>: Выбрать для Quick_Price_Check направление SHORT/LONG/BOTH (при LONG зайдет в растущую, при SHORT- в падающую, при BOTH- в какую попадется первой в коридоре)</li>
     <li><span class="param">Quick_LONG_start_Big</span>: при Quick_Price_Check LONG увеличим стартовый ордер в x раз (ввести в формате: "yes 2"/"no 2", где 2- это коэф. увеличения)</li>
     <li><span class="param">use_preset_pairs_data</span>: использовать заранее записанные в БД пресеты по паре (start_qty, tick и т.д.) для режима Quick_Price_Check</li>
-    <li><span class="param">Black_List</span>: список пар, которые будут игнорироваться при Quick_Only_White=no для Quick_Price_Check (например с фиатом)</li>
     <li><span class="param">clear_db_all_presets_pair</span>: удаление пресетов по всем парам (нужно при изменении leverage/marginType/tradeMode)</li>
     
     <div class="setting-title">Настройки режима Quick_My_Kline</div>
@@ -2577,7 +2576,7 @@
                    <!-- <li><a href="mailto:support@e-bots.com"><i class="fas fa-envelope"></i> support@e-bots.com</a></li> -->
                         <li><a href="https://t.me/E_Bot_chat" target="_blank"><i class="fab fa-telegram"></i> Telegram чат</a></li>
                    <!-- <li><a href="#"><i class="fas fa-map-marker-alt"></i> Москва, Россия</a></li> -->
-                        <li><a href="index_OLD.html" title="Старая версия сайта">Старая версия сайта</a></li>
+                        <li><a href="index_OLD.html" title="Старая версия сайта">Old version</a></li>
                     </ul>
                 </div>
             </div>
