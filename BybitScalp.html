@@ -268,7 +268,7 @@
             <h2><i class="fas fa-filter"></i> Фильтры отбора пар</h2>
             <ul class="param-list">
                 <li><span class="param-name">min_turnover_24</span><span class="param-desc">мин. 24ч объём (USDT)</span></li>
-                <li><span class="param-name">min_delta_24</span><span class="param-desc">диапазон % роста от 24ч минимума, "12.5%..24%"</span></li>
+                <li><span class="param-name">min_delta_24</span><span class="param-desc">диапазон % изменения от 24ч минимума, "12.5%..24%"</span></li>
                 <li><span class="param-name">min_delta_1h</span><span class="param-desc">диапазон % изменения от цены 1ч назад</span></li>
             </ul>
         </div>
@@ -310,7 +310,7 @@
         <div class="card">
             <h2><i class="fas fa-percent"></i> Финансирование</h2>
             <ul class="param-list">
-                <li><span class="param-name">check_funding</span><span class="param-desc">false или число (порог %), проверка ставки финансирования используется, в зависимости от LONG/SHORT</span></li>
+                <li><span class="param-name">check_funding</span><span class="param-desc">false или число (порог %), проверка ставки финансирования используется в зависимости от LONG/SHORT</span></li>
                 <li><span class="param-name">check_abs_funding</span><span class="param-desc">True – проверять |rate|, False – по направлению (При False – для LONG отклоняются ставки больше порога, для SHORT ставки меньше порога, при True проверяется abs(rate))</span></li>
             </ul>
             <!-- 
@@ -327,10 +327,9 @@
                 <li><span class="param-name">super_asset</span><span class="param-desc">приоритетные пары (через пробел)</span></li>
                 <li><span class="param-name">blacklist</span><span class="param-desc">исключённые пары</span></li>
                 <li><span class="param-name">check_funding</span><span class="param-desc">порог ставки финансирования</span></li>
-                <li><span class="param-name">disable_funding_check</span><span class="param-desc">полное отключение проверки фандинга</span></li>
+                <li><span class="param-name">check_abs_funding</span><span class="param-desc">при True проверяется abs(rate)</span></li>
             </ul>
             <ul class="param-list" style="flex:1;">
-                <li><span class="param-name">limit_aver_SHORT</span><span class="param-desc">макс. уровней усреднения для SHORT</span></li>
                 <li><span class="param-name">licension</span><span class="param-desc">лицензионный ключ (опционально)</span></li>
                 <li><span class="param-name">max_age</span><span class="param-desc">таймер авто-закрытия позиции</span></li>
                 <li><span class="param-name">revers_dir</span><span class="param-desc">инверсия сигнала</span></li>
