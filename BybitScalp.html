@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Bybit Scalp Bot | Документация и параметры</title>
+    <!-- Font Awesome 6 (free) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #0b1120 0%, #1a1f2e 100%);
+            color: #eef2ff;
+            line-height: 1.6;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        /* Header with hero image */
+        .hero {
+            text-align: center;
+            padding: 3rem 1rem;
+            background: rgba(15, 25, 45, 0.7);
+            border-radius: 2rem;
+            margin-bottom: 2rem;
+            backdrop-filter: blur(4px);
+            border: 1px solid rgba(66, 153, 225, 0.3);
+        }
+
+        .hero img {
+            max-width: 120px;
+            border-radius: 30px;
+            margin-bottom: 1rem;
+            box-shadow: 0 0 20px rgba(0, 255, 255, 0.2);
+        }
+
+        .hero h1 {
+            font-size: 2.8rem;
+            background: linear-gradient(120deg, #6ee7ff, #3b82f6);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            margin-bottom: 0.5rem;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* grid cards */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 1.8rem;
+            margin-bottom: 2.5rem;
+        }
+
+        .card {
+            background: rgba(18, 25, 45, 0.7);
+            backdrop-filter: blur(5px);
+            border-radius: 1.5rem;
+            padding: 1.5rem;
+            border: 1px solid rgba(59, 130, 246, 0.2);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+            border-color: rgba(59, 130, 246, 0.5);
+        }
+
+        .card h2 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            border-left: 4px solid #3b82f6;
+            padding-left: 1rem;
+        }
+
+        .card h2 i {
+            color: #3b82f6;
+            font-size: 1.6rem;
+        }
+
+        .param-list {
+            list-style: none;
+            margin-top: 1rem;
+        }
+
+        .param-list li {
+            padding: 0.6rem 0;
+            border-bottom: 1px dashed rgba(255,255,255,0.1);
+            display: flex;
+            flex-wrap: wrap;
+            align-items: baseline;
+            gap: 0.5rem;
+        }
+
+        .param-name {
+            font-weight: 700;
+            color: #93c5fd;
+            min-width: 150px;
+            font-family: monospace;
+        }
+
+        .param-desc {
+            color: #cbd5e1;
+            flex: 1;
+        }
+
+        .badge {
+            background: #1e293b;
+            padding: 0.2rem 0.6rem;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-family: monospace;
+            color: #94a3b8;
+        }
+
+        .section-title {
+            font-size: 2rem;
+            margin: 2rem 0 1.5rem 0;
+            text-align: center;
+            position: relative;
+            display: inline-block;
+            width: 100%;
+        }
+
+        .section-title:after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 3px;
+            background: #3b82f6;
+            margin: 0.5rem auto 0;
+            border-radius: 2px;
+        }
+
+        .terminal {
+            background: #0a0c15;
+            border-radius: 1rem;
+            padding: 1.2rem;
+            font-family: 'Fira Code', monospace;
+            font-size: 0.9rem;
+            color: #cbd5e1;
+            overflow-x: auto;
+            border: 1px solid #2d3a5e;
+            margin: 1rem 0;
+        }
+
+        .terminal pre {
+            margin: 0;
+            white-space: pre-wrap;
+        }
+
+        .btn {
+            display: inline-block;
+            background: #2563eb;
+            color: white;
+            padding: 0.6rem 1.5rem;
+            border-radius: 2rem;
+            text-decoration: none;
+            font-weight: 600;
+            transition: 0.2s;
+            margin-top: 0.5rem;
+        }
+
+        .btn:hover {
+            background: #1e40af;
+            transform: scale(1.02);
+        }
+
+        .flex-between {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 3rem;
+            padding: 1.5rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            font-size: 0.85rem;
+            opacity: 0.7;
+        }
+
+        @media (max-width: 700px) {
+            .container {
+                padding: 1rem;
+            }
+            .hero h1 {
+                font-size: 2rem;
+            }
+            .param-name {
+                min-width: 120px;
+            }
+        }
+
+        .img-placeholder {
+            width: 100%;
+            height: 160px;
+            background: linear-gradient(145deg, #2d3a5e, #1f2a44);
+            border-radius: 1rem;
+            margin: 1rem 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #6b7280;
+            font-size: 0.9rem;
+            background-size: cover;
+            background-position: center;
+        }
+        .img-placeholder i {
+            font-size: 3rem;
+            color: #3b82f6;
+            opacity: 0.7;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="hero">
+        <!-- условное изображение (можно заменить на реальное) -->
+        <div class="img-placeholder" style="background-image: url('https://images.unsplash.com/photo-1639762681057-408e52192e55?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=200&q=80'); background-size: cover;">
+            <i class="fas fa-chart-line" style="font-size: 3rem; background: rgba(0,0,0,0.5); padding: 0.5rem; border-radius: 100%;"></i>
+        </div>
+        <h1><i class="fas fa-robot"></i> Bybit Scalp Bot</h1>
+        <p>Автоматический торговый бот для USDT-бессрочных контрактов Bybit. Скальпинг по дельте и индикаторная торговля. Усреднение позиций, лимитные TP/SL, трейлинг-стоп.</p>
+    </div>
+
+    <!-- Параметры стратегии (карточки) -->
+    <div class="grid">
+        <!-- Основные параметры -->
+        <div class="card">
+            <h2><i class="fas fa-sliders-h"></i> Основные параметры</h2>
+            <ul class="param-list">
+                <li><span class="param-name">leverage</span><span class="param-desc">кредитное плечо (число)</span></li>
+                <li><span class="param-name">kline_interval</span><span class="param-desc">длительность свечи (сек) – режим дельты</span></li>
+                <li><span class="param-name">kline_delta</span><span class="param-desc">диапазон дельты, "2%..4%"</span></li>
+                <li><span class="param-name">price_rollback</span><span class="param-desc">режим отката (True/False)</span></li>
+                <li><span class="param-name">min_order</span><span class="param-desc">мин. объём ордера в USDT</span></li>
+                <li><span class="param-name">max_open_pos</span><span class="param-desc">макс. кол-во открытых позиций</span></li>
+                <li><span class="param-name">quick_direction</span><span class="param-desc">направление (LONG/SHORT/BOTH)</span></li>
+            </ul>
+        </div>
+        <!-- Фильтры отбора пар -->
+        <div class="card">
+            <h2><i class="fas fa-filter"></i> Фильтры отбора пар</h2>
+            <ul class="param-list">
+                <li><span class="param-name">min_turnover_24</span><span class="param-desc">мин. 24ч объём (USDT)</span></li>
+                <li><span class="param-name">min_delta_24</span><span class="param-desc">диапазон % роста от 24ч минимума, "12.5%..24%"</span></li>
+                <li><span class="param-name">min_delta_1h</span><span class="param-desc">диапазон % изменения от цены 1ч назад</span></li>
+            </ul>
+        </div>
+        <!-- Риски и TP/SL -->
+        <div class="card">
+            <h2><i class="fas fa-chart-line"></i> Риски & TP/SL</h2>
+            <ul class="param-list">
+                <li><span class="param-name">Take_perc</span><span class="param-desc">тейк-профит в %</span></li>
+                <li><span class="param-name">Loss_perc</span><span class="param-desc">стоп-лосс в %</span></li>
+                <li><span class="param-name">Trail_perc</span><span class="param-desc">процент отката для трейлинг-стопа</span></li>
+                <li><span class="param-name">cooldown_seconds</span><span class="param-desc">блокировка пары после закрытия (сек)</span></li>
+                <li><span class="param-name">max_age</span><span class="param-desc">время жизни позиции (сек)</span></li>
+            </ul>
+        </div>
+        <!-- Режимы управления рисками -->
+        <div class="card">
+            <h2><i class="fas fa-exchange-alt"></i> Режимы рисков</h2>
+            <ul class="param-list">
+                <li><span class="param-name">TP_Market</span><span class="param-desc">рыночный TP/SL (сразу с открытием)</span></li>
+                <li><span class="param-name">TP_Limit</span><span class="param-desc">лимитный TP + рыночный SL (после открытия)</span></li>
+                <li><span class="param-name">Trail_stop</span><span class="param-desc">трейлинг-стоп (после открытия)</span></li>
+                <li><span class="param-name">Trade_ind</span><span class="param-desc">индикаторная торговля + лимитный TP/SL</span></li>
+            </ul>
+            <div class="badge">Взаимоисключающие</div>
+        </div>
+        <!-- Индикаторный режим и усреднение -->
+        <div class="card">
+            <h2><i class="fas fa-chart-simple"></i> Индикаторы & усреднение</h2>
+            <ul class="param-list">
+                <li><span class="param-name">kline_indicator</span><span class="param-desc">интервал свечей (мин)</span></li>
+                <li><span class="param-name">boost</span><span class="param-desc">усиление фильтров (MACD, RSI, объём)</span></li>
+                <li><span class="param-name">averaging</span><span class="param-desc">усреднение позиции (True/False)</span></li>
+                <li><span class="param-name">step_av_LONG</span><span class="param-desc">уровни усреднения LONG, например "1%..1.5%"</span></li>
+                <li><span class="param-name">step_av_SHORT</span><span class="param-desc">уровни усреднения SHORT</span></li>
+                <li><span class="param-name">revers_dir</span><span class="param-desc">реверсировать направление сигнала</span></li>
+            </ul>
+        </div>
+        <!-- Проверка фандинга -->
+        <div class="card">
+            <h2><i class="fas fa-percent"></i> Финансирование</h2>
+            <ul class="param-list">
+                <li><span class="param-name">check_funding</span><span class="param-desc">false или число (порог %), например 0.1</span></li>
+                <li><span class="param-name">check_abs_funding</span><span class="param-desc">True – проверять |rate|, False – по направлению</span></li>
+            </ul>
+            <div class="badge">Игнорирование ставки при True в disable_funding_check</div>
+        </div>
+    </div>
+
+    <!-- Дополнительные настройки -->
+    <div class="card" style="margin-bottom: 2rem;">
+        <h2><i class="fas fa-tools"></i> Дополнительные настройки</h2>
+        <div class="flex-between" style="flex-wrap: wrap;">
+            <ul class="param-list" style="flex:1; margin-right: 1rem;">
+                <li><span class="param-name">super_asset</span><span class="param-desc">приоритетные пары (через пробел)</span></li>
+                <li><span class="param-name">blacklist</span><span class="param-desc">исключённые пары</span></li>
+                <li><span class="param-name">check_funding</span><span class="param-desc">порог ставки финансирования</span></li>
+                <li><span class="param-name">disable_funding_check</span><span class="param-desc">полное отключение проверки фандинга</span></li>
+            </ul>
+            <ul class="param-list" style="flex:1;">
+                <li><span class="param-name">limit_aver_SHORT</span><span class="param-desc">макс. уровней усреднения для SHORT</span></li>
+                <li><span class="param-name">licension</span><span class="param-desc">лицензионный ключ (опционально)</span></li>
+                <li><span class="param-name">max_age</span><span class="param-desc">таймер авто-закрытия позиции</span></li>
+                <li><span class="param-name">revers_dir</span><span class="param-desc">инверсия сигнала</span></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Описание работы (кратко) -->
+    <div class="card">
+        <h2><i class="fas fa-play-circle"></i> Как работает бот?</h2>
+        <div style="display: flex; flex-wrap: wrap; gap: 1.5rem;">
+            <div style="flex:1;">
+                <h3><i class="fas fa-chart-line"></i> Режим дельты</h3>
+                <p>Произвольная свеча, дельта от открытия/экстремумов. Сигнал при попадании в диапазон kline_delta. Открытие с TP_Market / TP_Limit / Trail_stop.</p>
+                <h3><i class="fas fa-brain"></i> Индикаторный режим</h3>
+                <p>Анализ Bollinger Bands, RSI, EMA, MACD. Сигнал на пробой полос + тренд + объём. Boost – доп.фильтры.</p>
+            </div>
+            <div style="flex:1;">
+                <h3><i class="fas fa-layer-group"></i> Усреднение (averaging)</h3>
+                <p>Лимитные ордера на уровнях step_av_*. При исполнении – пересчёт средней цены, перестановка TP, следующий уровень. Стоп-лосс по последнему усреднению.</p>
+                <h3><i class="fas fa-shield-alt"></i> Защита</h3>
+                <p>Cooldown после закрытия, проверка фандинга, таймер max_age, отмена всех ордеров при закрытии позиции.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Установка и запуск -->
+    <div class="card">
+        <h2><i class="fas fa-terminal"></i> Установка и запуск (Ubuntu VPS)</h2>
+        <div class="terminal">
+            <pre># 1. Создать папку и загрузить файл
+mkdir BybitScalp && cd BybitScalp
+# 2. Перенести исполняемый файл (BybitScalp) в эту папку
+# 3. Открыть screen-сессию
+screen -S BybitScalp
+# 4. Дать права на запуск
+chmod 755 BybitScalp
+# 5. Запустить
+./BybitScalp
+# Управление:
+#   Ctrl+C – остановка бота (сохранит открытые позиции)
+#   Ctrl+A, D – отсоединиться от screen
+#   screen -x BybitScalp – вернуться к сессии
+            </pre>
+        </div>
+        <div class="terminal" style="background:#0f1119;">
+            <pre><i class="fas fa-language"></i> Решение проблем с локализацией (UnicodeEncodeError):
+# dpkg-reconfigure locales  → выбрать ru_RU.UTF-8, en_US.UTF-8 по умолчанию
+# sudo apt-get install language-pack-ru
+# sudo update-locale LANG=ru_RU.UTF-8
+# sudo apt-get install --reinstall locales</pre>
+        </div>
+        <div style="text-align: center; margin-top: 1rem;">
+            <a href="#" class="btn" onclick="alert('Скачивание бота доступно по запросу. Обратитесь к разработчику.'); return false;"><i class="fas fa-download"></i> Скачать бинарник (для Linux x64)</a>
+        </div>
+    </div>
+
+    <!-- Изображения (иллюстрации) -->
+    <div class="grid" style="margin-top: 1rem;">
+        <div class="img-placeholder" style="background-image: url('https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&h=300&q=80'); background-size: cover;">
+            <i class="fas fa-chart-line"></i>
+        </div>
+        <div class="img-placeholder" style="background-image: url('https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&h=300&q=80'); background-size: cover;">
+            <i class="fas fa-chart-simple"></i>
+        </div>
+        <div class="img-placeholder" style="background-image: url('https://images.unsplash.com/photo-1642543492481-44e81e3914a7?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&h=300&q=80'); background-size: cover;">
+            <i class="fas fa-terminal"></i>
+        </div>
+    </div>
+    <footer>
+        <i class="fas fa-copyright"></i> Bybit Scalp Bot — Автоматическая торговля | Telegram-управление, логирование, защита кода
+    </footer>
+</div>
+</body>
+</html>
