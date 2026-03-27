@@ -310,7 +310,7 @@
         <div class="card">
             <h2><i class="fas fa-percent"></i> Финансирование</h2>
             <ul class="param-list">
-                <li><span class="param-name">check_funding</span><span class="param-desc">false или число (порог %), проверка ставки финансирования используется в зависимости от LONG/SHORT</span></li>
+                <li><span class="param-name">check_funding</span><span class="param-desc">false или число (порог %)</span></li>
                 <li><span class="param-name">check_abs_funding</span><span class="param-desc">True – проверять |rate|, False – по направлению (При False – для LONG отклоняются ставки больше порога, для SHORT ставки меньше порога, при True проверяется abs(rate))</span></li>
             </ul>
             <!-- 
@@ -326,8 +326,10 @@
             <ul class="param-list" style="flex:1; margin-right: 1rem;">
                 <li><span class="param-name">super_asset</span><span class="param-desc">приоритетные пары (через пробел)</span></li>
                 <li><span class="param-name">blacklist</span><span class="param-desc">исключённые пары</span></li>
+                <!--
                 <li><span class="param-name">check_funding</span><span class="param-desc">порог ставки финансирования</span></li>
                 <li><span class="param-name">check_abs_funding</span><span class="param-desc">при True проверяется abs(rate)</span></li>
+                -->
             </ul>
             <ul class="param-list" style="flex:1;">
                 <li><span class="param-name">licension</span><span class="param-desc">лицензионный ключ (опционально)</span></li>
@@ -395,9 +397,11 @@ chmod 755 BybitScalp
         <div class="img-placeholder" style="background-image: url('https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&h=300&q=80'); background-size: cover;">
             <i class="fas fa-chart-simple"></i>
         </div>
+        <!--
         <div class="img-placeholder" style="background-image: url('https://images.unsplash.com/photo-1642543492481-44e81e3914a7?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&h=300&q=80'); background-size: cover;">
             <i class="fas fa-terminal"></i>
         </div>
+        -->
     </div>
     <footer>
         <i class="fas fa-copyright"></i> Bybit Scalp Bot — Автоматическая торговля | Telegram-управление, логирование, защита кода
