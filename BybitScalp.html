@@ -289,7 +289,7 @@
             <ul class="param-list">
                 <li><span class="param-name">TP_Market</span><span class="param-desc">Режим дельты, рыночный TP/SL (сразу с открытием)</span></li>
                 <li><span class="param-name">TP_Limit</span><span class="param-desc">Режим дельты, лимитный TP + рыночный SL (после открытия)</span></li>
-                <li><span class="param-name">Trail_stop</span><span class="param-desc">Режим дельты, трейлинг-стоп (после открытия)</span></li>
+                <li><span class="param-name">Trail_stop</span><span class="param-desc">Режим дельты, лимитный TP + трейлинг-стоп (после открытия)</span></li>
                 <li><span class="param-name">Trade_ind</span><span class="param-desc">Режим индикаторов, лимитный TP + рыночный SL (после открытия)</span></li>
             </ul>
             <div class="badge">Взаимоисключающие</div>
@@ -347,7 +347,7 @@
         <div style="display: flex; flex-wrap: wrap; gap: 1.5rem;">
             <div style="flex:1;">
                 <h3><i class="fas fa-chart-line"></i> Режим дельты</h3>
-                <p>Произвольная свеча, дельта от открытия/экстремумов. Сигнал при попадании в диапазон kline_delta. Открытие с TP_Market / TP_Limit / Trail_stop.</p>
+                <p>Произвольная свеча, дельта от цены открытия или экстремумов. Сигнал при попадании в диапазон kline_delta. Открытие с TP_Market / TP_Limit / Trail_stop.</p>
                 <h3><i class="fas fa-brain"></i> Индикаторный режим</h3>
                 <p>Анализ Bollinger Bands, RSI, EMA, MACD. Сигнал на пробой полос + тренд + объём. Boost – доп.фильтры.</p>
             </div>
