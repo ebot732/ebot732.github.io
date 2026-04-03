@@ -258,7 +258,7 @@
                 <li><span class="param-name">kline_interval</span><span class="param-desc">длительность свечи (сек) – режим дельты</span></li>
                 <li><span class="param-name">kline_delta</span><span class="param-desc">диапазон дельты, "2%..4%"</span></li>
                 <li><span class="param-name">price_rollback</span><span class="param-desc">расчет цены от экстремумов в kline_interval (True/False)</span></li>
-                <li><span class="param-name">min_order</span><span class="param-desc">мин. объём ордера в USDT</span></li>
+                <li><span class="param-name">start_order</span><span class="param-desc">начальный объём ордера в USDT</span></li>
                 <li><span class="param-name">max_open_pos</span><span class="param-desc">макс. кол-во открытых позиций</span></li>
                 <li><span class="param-name">quick_direction</span><span class="param-desc">направление (LONG/SHORT/BOTH)</span></li>
             </ul>
@@ -268,8 +268,9 @@
             <h2><i class="fas fa-filter"></i> Фильтры отбора пар</h2>
             <ul class="param-list">
                 <li><span class="param-name">min_turnover_24</span><span class="param-desc">мин. 24ч объём (USDT)</span></li>
-                <li><span class="param-name">min_delta_24</span><span class="param-desc">диапазон % изменения от 24ч минимума, "12.5%..24%"</span></li>
-                <li><span class="param-name">min_delta_1h</span><span class="param-desc">диапазон % изменения от цены 1ч назад</span></li>
+                <li><span class="param-name">delta_24</span><span class="param-desc">диапазон % изменения от 24ч минимума, "12.5%..24%"</span></li>
+                <li><span class="param-name">delta_1h</span><span class="param-desc">диапазон % изменения от цены 1ч назад</span></li>
+                <li><span class="param-name">delta_30m</span><span class="param-desc">диапазон % изменения от цены 30 минут назад, проверяется непосредственно перед открытием позиции</span></li>
                 <li><span class="param-name">delta_24_from_low</span><span class="param-desc">True: для фильтров отбора использовать lowPrice24h, False: использовать prevPrice24h (цена 24ч назад)</span></li>
                 <li><span class="param-name">time_select_pair</span><span class="param-desc">периодичность отбора пар по фильтрам в минутах</span></li>
             </ul>
@@ -328,6 +329,7 @@
             <ul class="param-list" style="flex:1; margin-right: 1rem;">
                 <li><span class="param-name">super_asset</span><span class="param-desc">приоритетные пары</span></li>
                 <li><span class="param-name">blacklist</span><span class="param-desc">исключённые пары</span></li>
+                <li><span class="param-name">faster</span><span class="param-desc">При True пропускаются: проверка статуса открывающего позу ордера, проверка delta_30m, а значение rate funding применяется из запомненного при отборе пар (при False- выполняются все проверки)</span></li>
                 <!--
                 <li><span class="param-name">check_funding</span><span class="param-desc">порог ставки финансирования</span></li>
                 <li><span class="param-name">check_abs_funding</span><span class="param-desc">при True проверяется abs(rate)</span></li>
