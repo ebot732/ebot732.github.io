@@ -270,8 +270,8 @@
                 <li><span class="param-name">min_turnover_24</span><span class="param-desc">мин. 24ч объём (USDT)</span></li>
                 <li><span class="param-name">delta_24</span><span class="param-desc">диапазон % изменения от 24ч минимума, "12.5%..24%"</span></li>
                 <li><span class="param-name">delta_1h</span><span class="param-desc">диапазон % изменения от цены 1ч назад</span></li>
-                <li><span class="param-name">delta_30m</span><span class="param-desc">off или диапазон % изменения от цены 30 минут назад, проверяется непосредственно перед открытием позиции</span></li>
-                <li><span class="param-name">delta_7D</span><span class="param-desc">off или диапазон % изменения от цены 7 дней назад, проверяется непосредственно перед открытием позиции</span></li>
+                <li><span class="param-name">delta_30m</span><span class="param-desc">off или диапазон % изменения от цены 30 минут назад, проверяется непосредственно перед открытием позиции, запрос занимает 0.2-0.3 сек</span></li>
+                <li><span class="param-name">delta_7D</span><span class="param-desc">off или диапазон % изменения от цены 7 дней назад, проверяется непосредственно перед открытием позиции, запрос занимает 0.2-0.3 сек</span></li>
                 <li><span class="param-name">delta_24_from_low</span><span class="param-desc">True: для фильтров отбора использовать lowPrice24h, False: использовать prevPrice24h (цена 24ч назад)</span></li>
                 <li><span class="param-name">time_select_pair</span><span class="param-desc">периодичность отбора пар по фильтрам в минутах</span></li>
             </ul>
@@ -314,7 +314,7 @@
         <div class="card">
             <h2><i class="fas fa-percent"></i> Финансирование</h2>
             <ul class="param-list">
-                <li><span class="param-name">check_funding</span><span class="param-desc">off или число (порог %)</span></li>
+                <li><span class="param-name">check_funding</span><span class="param-desc">off или число (порог %, запрос занимает 0.1-0.2 сек)</span></li>
                 <li><span class="param-name">check_abs_funding</span><span class="param-desc">True – проверять |rate|, False – по направлению (При False – для LONG отклоняются ставки больше порога, для SHORT ставки меньше порога, при True проверяется модуль |rate|)</span></li>
             </ul>
             <!-- 
@@ -330,7 +330,7 @@
             <ul class="param-list" style="flex:1; margin-right: 1rem;">
                 <li><span class="param-name">super_asset</span><span class="param-desc">приоритетные пары</span></li>
                 <li><span class="param-name">blacklist</span><span class="param-desc">исключённые пары</span></li>
-                <li><span class="param-name">faster</span><span class="param-desc">При True пропускается проверка статуса открывающего позу ордера, а значение rate funding применяется из запомненного при отборе пар (при False- выполняются все проверки)</span></li>
+                <li><span class="param-name">faster</span><span class="param-desc">При True пропускается проверка статуса открывающего позу ордера, а значение rate funding применяется из запомненного при отборе пар (при False- выполняются все проверки, запросы занимают 0.2-0.3 сек)</span></li>
                 <!--
                 <li><span class="param-name">check_funding</span><span class="param-desc">порог ставки финансирования</span></li>
                 <li><span class="param-name">check_abs_funding</span><span class="param-desc">при True проверяется abs(rate)</span></li>
