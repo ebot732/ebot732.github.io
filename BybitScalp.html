@@ -330,7 +330,7 @@
             <ul class="param-list" style="flex:1; margin-right: 1rem;">
                 <li><span class="param-name">super_asset</span><span class="param-desc">приоритетные пары</span></li>
                 <li><span class="param-name">blacklist</span><span class="param-desc">исключённые пары</span></li>
-                <li><span class="param-name">faster</span><span class="param-desc">При True пропускается проверка статуса открывающего позу ордера, а значение rate funding применяется из запомненного при отборе пар (при False- выполняются все проверки, запросы занимают 0.2-0.3 сек)</span></li>
+                <li><span class="param-name">faster</span><span class="param-desc">При True пропускается проверка статуса открывающего позу ордера, а значение rate funding применяется из запомненного при отборе пар (при False- проверяется и ставка фандинга и статус открывающего ордера, запросы занимают 0.2-0.3 сек)</span></li>
                 <!--
                 <li><span class="param-name">check_funding</span><span class="param-desc">порог ставки финансирования</span></li>
                 <li><span class="param-name">check_abs_funding</span><span class="param-desc">при True проверяется abs(rate)</span></li>
