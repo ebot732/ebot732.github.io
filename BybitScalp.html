@@ -256,7 +256,7 @@
             <ul class="param-list">
                 <li><span class="param-name">leverage</span><span class="param-desc">кредитное плечо (число)</span></li>
                 <li><span class="param-name">kline_interval</span><span class="param-desc">длительность свечи (сек) – режим дельты</span></li>
-                <li><span class="param-name">multi_kline</span><span class="param-desc">несколько (3) параллельных произвольных свечей (Каждая свеча начинается со своей ценой и временем, которые обновляются каждые kline_interval / 5) (True/False), отключает price_rollback</span></li>
+                <li><span class="param-name">multi_kline</span><span class="param-desc">несколько (4) параллельных произвольных свечей (Каждая свеча начинается со своей ценой и временем, которые обновляются каждые kline_interval / 4) (True/False), отключает price_rollback</span></li>
                 <li><span class="param-name">kline_delta</span><span class="param-desc">диапазон дельты, "2%..4%"</span></li>
                 <li><span class="param-name">price_rollback</span><span class="param-desc">расчет цены от экстремумов в kline_interval (True/False)</span></li>
                 <li><span class="param-name">start_order</span><span class="param-desc">начальный объём ордера в USDT</span></li>
@@ -329,7 +329,7 @@
         <h2><i class="fas fa-tools"></i> Дополнительные настройки</h2>
         <div class="flex-between" style="flex-wrap: wrap;">
             <ul class="param-list" style="flex:1; margin-right: 1rem;">
-                <li><span class="param-name">super_asset</span><span class="param-desc">приоритетный список пар, игнорирующий фильтры отбора, для диапазона kline_delta будет применяться '0%..10%'</span></li>
+                <li><span class="param-name">super_asset</span><span class="param-desc">приоритетный список пар, игнорирующий фильтры отбора, для диапазона kline_delta по умолчанию будет применяться '0%..10%'</span></li>
                 <li><span class="param-name">blacklist</span><span class="param-desc">исключённые пары</span></li>
                 <li><span class="param-name">faster</span><span class="param-desc">При True пропускается проверка статуса открывающего позу ордера, а значение rate funding применяется из запрашиваемой раз в 3 минуты ставки для отобранных пар (при False- проверяется и текущая ставка фандинга и статус открывающего ордера, запросы занимают 0.2-0.3 сек)</span></li>
                 <!--
@@ -364,7 +364,10 @@
                 <h3><i class="fas fa-layer-group"></i> Усреднение (averaging) для режимов TP_Limit/Trade_ind</h3>
                 <p>Лимитные ордера на уровнях step_av_*. При исполнении – пересчёт средней цены, перестановка TP, следующий уровень. Стоп-лосс по последнему усреднению.</p>
                 <h3><i class="fas fa-shield-alt"></i> Защита</h3>
-                <p>Cooldown после закрытия, проверка фандинга, таймер max_age, отмена всех ордеров при закрытии позиции, выставление StopLoss Market для каждой открытой позиции.</p>
+                <p>Cooldown после закрытия, проверка фандинга, таймер max_age, отмена всех ордеров при закрытии позиции,
+                выставление StopLoss Market для каждой открытой позиции.
+                После применения фильтров отбора пар для работы проверяет последние 20 анонсов Bybit и. если есть аноснсы о делистинге, исключает эти пары.
+                </p>
             </div>
         </div>
     </div>
