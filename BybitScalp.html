@@ -316,6 +316,7 @@
             <h2><i class="fas fa-percent"></i> Финансирование</h2>
             <ul class="param-list">
                 <li><span class="param-name">check_funding</span><span class="param-desc">off или число (порог %, запрос занимает 0.1-0.2 сек)</span></li>
+                <li><span class="param-name">min_fundIntervHour</span><span class="param-desc">минимально разрешенный интервал фандинга в часах</span></li>
                 <li><span class="param-name">check_abs_funding</span><span class="param-desc">True – проверять |rate|, False – по направлению (При False – для LONG отклоняются ставки больше порога, для SHORT ставки меньше порога, при True проверяется модуль |rate|)</span></li>
             </ul>
             <!-- 
@@ -366,7 +367,7 @@
                 <h3><i class="fas fa-shield-alt"></i> Защита</h3>
                 <p>Cooldown после закрытия, проверка фандинга, таймер max_age, отмена всех ордеров при закрытии позиции,
                 выставление StopLoss Market для каждой открытой позиции.
-                После применения фильтров отбора пар для работы проверяет последние 20 анонсов Bybit и. если есть аноснсы о делистинге, исключает эти пары.
+                После применения фильтров отбора пар для работы проверяет последние 20 анонсов Bybit и, если есть аноснсы о делистинге, исключает эти пары.
                 </p>
             </div>
         </div>
