@@ -304,9 +304,11 @@
         <div class="card">
             <h2><i class="fas fa-chart-simple"></i> Индикаторы & усреднение</h2>
             <ul class="param-list">
-                <li><span class="param-name">kline_indicator</span><span class="param-desc">интервал свечей (мин)</span></li>
-                <li><span class="param-name">boost</span><span class="param-desc">усиливает фильтры в сложном режиме (simple_ind=False): добавляет RSI, MACD и повышает требование к объёму (1.2×MA20)</span></li>
-                <li><span class="param-name">simple_ind</span><span class="param-desc">упрощённый режим: вход по пробою максимума/минимума за 20 свечей + EMA200, с фильтрами объёма (>MA20*0.8), свежести пробоя, направления свечи и наклона EMA50</span></li>
+                <li><span class="param-name">kline_ind</span><span class="param-desc">интервал свечей (в минутах)</span></li>
+                <li><span class="param-name">Level_ind</span><span class="param-desc">уровень строгости индикаторов:</span></li>
+                <li><span class="param-name">&mdash; standart</span><span class="param-desc">вход по тренду (EMA50&gt;EMA200 или &lt;) + пробой верхней/нижней полосы Боллинджера + фильтры свежести пробоя и наклона EMA50 (0.4%)</span></li>
+                <li><span class="param-name">&mdash; simple</span><span class="param-desc">упрощает режим: вход по пробою максимума/минимума за 20 свечей + EMA200, с фильтрами объёма (&gt;MA20*0.8), свежести пробоя, направления свечи и наклона EMA50</span></li>
+                <li><span class="param-name">&mdash; boost</span><span class="param-desc">усиливает фильтры, добавляет RSI, MACD и повышает требование к объёму (1.2×MA20)</span></li>
                 <li><span class="param-name">averaging</span><span class="param-desc">усреднение позиции (True/False)</span></li>
                 <li><span class="param-name">step_av_LONG</span><span class="param-desc">уровни усреднения LONG, например "1%..1.5%"</span></li>
                 <li><span class="param-name">step_av_SHORT</span><span class="param-desc">уровни усреднения SHORT</span></li>
@@ -360,7 +362,7 @@
                 <h3><i class="fas fa-chart-line"></i> Режим дельты</h3>
                 <p>Произвольная свеча, дельта от цены открытия или экстремумов. Сигнал при попадании в диапазон kline_delta. Открытие с TP_Market / TP_Limit / Trail_stop.</p>
                 <h3><i class="fas fa-brain"></i> Индикаторный режим</h3>
-                <p>Анализ Bollinger Bands, RSI, EMA, MACD. Сигнал на пробой полос + тренд + объём. Boost – доп.фильтры. Simple_ind - упрощение</p>
+                <p>Вход по индикаторам с учетом уровней строгости: 'standart', 'simple'- упрощение, 'boost'- усиление.</p>
                 <h3><i class="fas fa-tachometer-alt"></i> Скорость открытия позиции после сигнала</h3>
                 <p> ≈ 0.2 сек если faster==True и delta_30m=='off' и delta_7D=='off'.</p>
                 <p> ≈ 1 сек если faster==False и delta_30m!='off' и delta_7D!='off'.</p>
