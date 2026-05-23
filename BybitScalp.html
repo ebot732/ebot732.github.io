@@ -258,6 +258,7 @@
                 <li><span class="param-name">kline_interval</span><span class="param-desc">длительность свечи (сек) – режим дельты</span></li>
                 <li><span class="param-name">multi_kline</span><span class="param-desc">несколько (3) параллельных произвольных свечей (Каждая свеча начинается со своей ценой и временем, которые обновляются каждые kline_interval / 3) (True/False), отключает price_rollback</span></li>
                 <li><span class="param-name">kline_delta</span><span class="param-desc">диапазон дельты, "2%..4%"</span></li>
+                <li><span class="param-name">super_kline_delta</span><span class="param-desc">диапазон дельты для super_asset ( по умолчанию '0%..10%')</span></li>
                 <li><span class="param-name">price_rollback</span><span class="param-desc">расчет цены от экстремумов в kline_interval (True/False)</span></li>
                 <li><span class="param-name">start_order</span><span class="param-desc">начальный объём ордера в USDT</span></li>
                 <li><span class="param-name">max_open_pos</span><span class="param-desc">макс. кол-во открытых позиций</span></li>
@@ -304,7 +305,7 @@
         </div>
         <!-- Режимы Lead_Lag и Pairs_trade -->
         <div class="card">
-            <h2><i class="fas fa-exchange-alt"></i> Lead_Lag & Pairs_trade</h2>
+            <h2><i class="fas fa-compress-alt"></i> Lead_Lag & Pairs_trade</h2>
             <ul class="param-list">
                 <li><span class="param-name">entry_z</span><span class="param-desc">Порог входа zscore</span></li>
                 <li><span class="param-name">exit_z</span><span class="param-desc">Порог выхода. При возврате спреда в диапазон Z‑счета</span></li>
@@ -318,13 +319,19 @@
         </div>
         <!-- Индикаторный режим и усреднение -->
         <div class="card">
-            <h2><i class="fas fa-chart-simple"></i> Индикаторы & усреднение</h2>
+            <h2><i class="fas fa-wave-square"></i> Индикаторы </h2>
             <ul class="param-list">
                 <li><span class="param-name">kline_ind</span><span class="param-desc">интервал свечей (в минутах)</span></li>
                 <li><span class="param-name">Level_ind</span><span class="param-desc">уровень строгости индикаторов:</span></li>
                 <li><span class="param-name">&mdash; standart</span><span class="param-desc">вход по тренду (EMA50&gt;EMA200 или &lt;) + пробой верхней/нижней полосы Боллинджера + фильтры свежести пробоя и наклона EMA50 (0.4%)</span></li>
                 <li><span class="param-name">&mdash; simple</span><span class="param-desc">упрощает режим: вход по пробою максимума/минимума за 20 свечей + EMA200, с фильтрами объёма (&gt;MA20*0.8), свежести пробоя, направления свечи и наклона EMA50 (0.2%)</span></li>
                 <li><span class="param-name">&mdash; boost</span><span class="param-desc">усиливает фильтры, добавляет RSI, MACD и повышает требование к объёму (&gt;MA20*1.2)</span></li>
+            </ul>
+        </div>
+        <!-- Индикаторный режим и усреднение -->
+        <div class="card">
+            <h2><i class="fas fa-bezier-curve"></i> Усреднение</h2>
+            <ul class="param-list">
                 <li><span class="param-name">averaging</span><span class="param-desc">усреднение позиции (True/False)</span></li>
                 <li><span class="param-name">step_av_LONG</span><span class="param-desc">уровни усреднения LONG, например "1%..1.5%"</span></li>
                 <li><span class="param-name">step_av_SHORT</span><span class="param-desc">уровни усреднения SHORT</span></li>
