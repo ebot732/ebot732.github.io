@@ -245,7 +245,7 @@
             <i class="fas fa-chart-line" style="font-size: 3rem; background: rgba(0,0,0,0.5); padding: 0.5rem; border-radius: 100%;"></i>
         </div>
         <h1><i class="fas fa-robot"></i> BybitScalp_Spot Bot</h1>
-        <p>Автоматический торговый бот для спотовых пар к USDT Bybit. Скальпинг по дельте и индикаторная торговля. Усреднение позиций, лимитные TP/SL, трейлинг-стоп.</p>
+        <p>Автоматический торговый бот для спотовых пар к USDT Bybit. Скальпинг по дельте и индикаторная торговля. Усреднение позиций, лимитный TP, маркет SL, трейлинг-стоп.</p>
         <p>Возможность тестирования бота и своей стратегии в Demo Trading (реальный стакан и тестовый баланс).</p>
     </div>
 
@@ -294,7 +294,7 @@
             <h2><i class="fas fa-exchange-alt"></i> Режимы работы</h2>
             <ul class="param-list">
                 <li><span class="param-name">TP_Limit</span><span class="param-desc">Режим дельты, лимитный TP + рыночный SL (после открытия)</span></li>
-                <li><span class="param-name">Trade_ind</span><span class="param-desc">Режим индикаторов, лимитный TP + трейлинг-стоп (или + рыночный SL при вкл. усреднений) (после открытия)</span></li>
+                <li><span class="param-name">Trade_ind</span><span class="param-desc">Режим индикаторов, лимитный TP рыночный SL (после открытия)</span></li>
             </ul>
             <div class="badge">Взаимоисключающие</div>
         </div>
@@ -363,8 +363,8 @@
                 выставление StopLoss Market для каждой открытой позиции.
                 После применения фильтров отбора пар для работы проверяет последние 20 анонсов Bybit и, если есть аноснсы о делистинге, исключает эти пары.</p>
                 <h3><i class="fas fa-tachometer-alt"></i> Скорость открытия позиции после сигнала</h3>
-                <p> ≈ 0.2 сек если delta_30m=='off' и delta_7D=='off'.</p>
-                <p> ≈ 1 сек если delta_30m!='off' и delta_7D!='off'.</p>
+                <p> ≈ 0.1-0.2 сек если delta_30m=='off' и delta_7D=='off'.</p>
+                <p> ≈ 0.5-0.7 сек если delta_30m!='off' и delta_7D!='off'.</p>
             </div>
         </div>
     </div>
