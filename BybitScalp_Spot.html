@@ -284,7 +284,7 @@
             <ul class="param-list">
                 <li><span class="param-name">Take_perc</span><span class="param-desc">тейк-профит в %</span></li>
                 <li><span class="param-name">Loss_perc</span><span class="param-desc">стоп-лосс в %</span></li>
-                <li><span class="param-name">BreakEven</span><span class="param-desc">включение безубытка, 'off' или 2 числа- BreakEven % и trailing_stop % (например, '1.4 0.5') для выставленния trailing_stop % при BreakEven % в плюс позиции (режимы TP_Market, TP_Limit, Trade_ind)</span></li>
+                <li><span class="param-name">BreakEven</span><span class="param-desc">включение безубытка, 'off' или 2 числа- BreakEven % и trailing_stop % (например, '1.4 0.5') для выставленния trailing_stop % при BreakEven % в плюс позиции.</span></li>
                 <li><span class="param-name">cooldown_seconds</span><span class="param-desc">блокировка пары после закрытия (сек)</span></li>
                 <li><span class="param-name">max_age</span><span class="param-desc">время жизни позиции (сек)</span></li>
             </ul>
@@ -400,7 +400,14 @@ chmod 755 BybitScalp
             <!--
             <a href="#" class="btn" onclick="alert('Скачивание бота доступно по запросу. Обратитесь к разработчику.'); return false;"><i class="fas fa-download"></i> Скачать бинарник (для Linux x64)</a>
             -->
-        <a href="https://github.com/ebot732/BybitSpot/releases/download/BybitScalp_Spot/BybitScalp_Spot-3" download class="btn"><i class="fas fa-download"></i> Скачать бинарник (для Linux x64)</a>
+            <!--
+            <a href="https://github.com/ebot732/BybitSpot/releases/download/BybitScalp_Spot/BybitScalp_Spot-3" download class="btn"><i class="fas fa-download"></i> Скачать бинарник (для Linux x64)</a>
+            -->
+            <!-- Ссылка по умолчанию гарантированно ведет на страницу релизов репозитория -->
+            <a href="https://github.com/ebot732/BybitScalp_Spot/releases" id="download-btn" class="btn" target="_blank">
+                <i class="fas fa-download"></i> <span id="download-text">Скачать бинарник (для Linux x64)</span>
+            </a>
+            
         </div>
     </div>
 
